@@ -1,0 +1,234 @@
+.mainSection {
+  background-image: url(../images/fondoFlor.jpg);
+  padding: 10rem; }
+
+.mainSection_h {
+  font-weight: bolder;
+  font-size: 3rem;
+  color: #ffffff; }
+
+.mainSection__p {
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: left;
+  color: #ffffff;
+  text-transform: uppercase;
+  animation-name: fade;
+  animation-iteration-count: 1;
+  animation-duration: 4s; }
+
+.link {
+  color: #d8395e;
+  font-weight: bold; }
+  .link:hover {
+    color: #d8395e;
+    font-weight: bold; }
+
+.divId {
+  padding: 55px; }
+
+.serviceSection1 {
+  background-image: url(../images/imagen6.jpg);
+  background-repeat: round;
+  font-size: 1.2rem;
+  color: #272727;
+  text-align: center;
+  border: #dfdcda;
+  height: 250px;
+  padding: 50px;
+  position: relative; }
+
+.serviceSection1:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all; }
+
+.serviceSection1 i, .serviceSection1 h3, .serviceSection1 p {
+  color: #ffffff;
+  position: relative; }
+
+.serviceSection2 {
+  background-image: url(../images/imagen7.jpg);
+  background-repeat: round;
+  font-size: 1.2rem;
+  color: #272727;
+  text-align: center;
+  border: #dfdcda;
+  height: 250px;
+  padding: 50px;
+  position: relative; }
+
+.serviceSection2:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all; }
+
+.serviceSection2 i, .serviceSection2 h3, .serviceSection2 p {
+  color: #ffffff;
+  position: relative; }
+
+.serviceSection3 {
+  background-image: url(../images/imagen8.jpg);
+  background-repeat: round;
+  font-size: 1.2rem;
+  color: #272727;
+  text-align: center;
+  border: #dfdcda;
+  height: 250px;
+  padding: 50px;
+  position: relative; }
+
+.serviceSection3:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all; }
+
+.serviceSection3 i, .serviceSection3 h3, .serviceSection3 p {
+  color: #ffffff;
+  position: relative; }
+
+/* Contacto */
+.cuadroCont {
+  text-align: justify;
+  font-size: 1.5rem;
+  line-height: 3rem;
+  width: 50%; }
+  .cuadroCont h1 {
+    font-size: 2rem; }
+
+/* Sobre mi */
+.fotoAle {
+  margin: 50px; }
+  .fotoAle h1 {
+    font-size: 1.8rem; }
+
+.sobreMi {
+  font-size: 1.5rem;
+  text-align: justify;
+  height: 200px;
+  width: 600px; }
+
+/* Viviendas */
+.contenedorV, .contenedorJ {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto;
+  justify-content: space-between;
+  align-items: center;
+  grid-template-areas: "imagen resena"; }
+
+.fondoV, .fondoJ {
+  color: #343333;
+  height: 150px;
+  padding: 50px;
+  text-align: left; }
+
+.imagenV {
+  grid-area: imagen; }
+
+.tablaV {
+  font-size: 1.3rem;
+  grid-area: resena;
+  padding: 5rem; }
+
+ol {
+  list-style: none; }
+
+/* Jardines */
+.imagenJ {
+  grid-area: imagen; }
+
+.resenaJ {
+  font-size: 1.5rem;
+  padding: 5rem;
+  grid-area: resena;
+  align-self: center; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+@keyframes fade {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #272727;
+  background-color: #f8f7f6;
+  font-family: 'Montserrat', serif;
+  animation-name: fade;
+  animation-iteration-count: 1;
+  animation-duration: 2s; }
+
+nav {
+  font-size: 1.5rem;
+  opacity: 0.8;
+  color: #272727; }
+
+section {
+  margin-bottom: 150px; }
+
+a {
+  text-decoration: none;
+  color: #272727; }
+  a:hover {
+    text-decoration: none;
+    color: #272727; }
+
+article h2 {
+  margin: 10px 0px 10px 0px;
+  font-size: 1.8rem;
+  color: #272727; }
+
+article img {
+  transition: all 0.5s; }
+  article img:hover {
+    transform: scale(1.01); }
+
+article p {
+  margin-top: 10px;
+  text-align: justify;
+  font-size: 1.5rem;
+  line-height: 20px;
+  color: #272727; }
+
+footer {
+  background-image: linear-gradient(to bottom, #c8beac, #ffffff);
+  font-weight: bold;
+  height: 350px; }
+  footer h3, footer i, footer p {
+    color: #272727; }
+  footer iframe {
+    padding: 10px; }
+
+iframe {
+  margin-top: 2rem; }
+
+.datosContacto {
+  font-size: 1.5rem;
+  padding: 5rem; }
+
+.autor {
+  color: #272727;
+  text-align: center; }

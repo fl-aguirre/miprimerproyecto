@@ -1,0 +1,91 @@
+
+/* Contacto */
+
+.cuadroCont {
+    text-align: justify;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    width: 50%;
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Sobre mi */
+
+.fotoAle {
+    margin: 50px;
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+.sobreMi {
+    font-size: 1.5rem;
+    text-align: justify;
+    height: 200px;
+    width: 600px;
+}
+
+/* Viviendas */
+
+%contenedor {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-areas:"imagen resena";
+}
+
+%fondo {
+    color: $gris-ocsuro;
+    height: 150px;
+    padding: 50px;
+    text-align: left;
+}
+
+.contenedorV {
+    @extend %contenedor;
+}
+
+.fondoV {
+    @extend %fondo;
+}
+
+.imagenV {
+    grid-area: imagen;
+}
+
+.tablaV {
+   font-size: 1.3rem;
+   grid-area: resena;
+   padding: 5rem;
+}
+
+ol {
+    list-style: none;
+
+}
+
+
+/* Jardines */
+
+.contenedorJ {
+    @extend %contenedor;
+}
+
+.fondoJ {
+    @extend %fondo;
+}
+
+.imagenJ {
+    grid-area: imagen;
+}
+
+.resenaJ {
+    font-size: 1.5rem;
+    padding: 5rem;
+    grid-area: resena;
+    align-self: center;
+}

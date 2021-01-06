@@ -1,0 +1,95 @@
+@import "colores";
+@import "index";
+@import "pages";
+
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@keyframes fade {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color:$negro;
+    background-color: $gris-fondo;
+    font-family: 'Montserrat', serif;
+    animation-name: fade;
+    animation-iteration-count: 1;
+    animation-duration: 2s ;
+}
+
+nav {
+    font-size: 1.5rem;
+    opacity: 0.8;
+    color: $negro;
+}
+
+section {
+    margin-bottom: 150px;
+}
+
+a {
+    text-decoration: none;
+    color: $negro;
+    &:hover {
+        text-decoration: none;
+        color: $negro;
+    }
+}
+
+article {
+    h2 {
+        margin: 10px 0px 10px 0px;
+        font-size: 1.8rem;
+        color: $negro;
+    }
+
+    img {
+        transition: all 0.5s;
+        &:hover {
+            transform: scale(1.01) ;
+        }
+    }
+
+    p {
+        margin-top: 10px;
+        text-align: justify;
+        font-size: 1.5rem;
+        line-height: 20px;
+        color: $negro;
+    }
+}
+
+footer {
+    background-image: linear-gradient(to bottom, $marron, $blanco);
+    font-weight: bold;
+    height: 350px;
+    h3, i, p {
+        color: $negro;
+    }
+    iframe {
+        padding: 10px;
+    }
+}
+
+iframe {
+    margin-top: 2rem;
+}
+
+.datosContacto {
+    font-size: 1.5rem;
+    padding: 5rem;
+}
+
+.autor {
+    color: $negro;
+    text-align: center;
+}

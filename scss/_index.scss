@@ -1,0 +1,71 @@
+// Index
+
+.mainSection {
+    background-image: url(../images/fondoFlor.jpg);
+    padding: 10rem;
+}
+
+.mainSection_h {
+    font-weight: bolder;
+    font-size: 3rem;
+    color: $blanco;
+}
+
+.mainSection__p {
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-align: left;
+    color: $blanco;
+    text-transform: uppercase;
+    animation-name: fade;
+    animation-iteration-count: 1;
+    animation-duration: 4s ;
+}
+
+.link {
+    color: $rosa;
+    font-weight: bold;
+    &:hover {
+        color: $rosa;
+        font-weight: bold;
+    }
+}
+
+.divId {
+    padding: 55px;
+}
+
+$lista: (1,2,3);
+
+
+@each $var in $lista {
+    .serviceSection#{$var} {
+        background-image: url(../images/imagen#{$var+5}.jpg) ;
+        background-repeat: round;
+        font-size: 1.2rem;
+        color:$negro;
+        text-align: center;
+        border: $gris-claro;
+        height: 250px;
+        padding: 50px;
+        position: relative;
+    }
+
+    .serviceSection#{$var}:before {
+        content:'';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0,0,0,0.4);
+        transition: all;
+    }   
+
+    .serviceSection#{$var} {
+        i, h3, p {
+        color: $blanco;
+        position: relative;
+        }
+    }
+}
