@@ -26,6 +26,8 @@ body {
     animation-duration: 2s ;
 }
 
+// Barra navegación
+
 nav {
     font-size: 1.5rem;
     opacity: 0.8;
@@ -33,6 +35,8 @@ nav {
         font-size: 1.5rem;
     }
 }
+
+// Secciones
 
 section {
     margin-bottom: 150px;
@@ -71,6 +75,8 @@ article {
     }
 }
 
+// Footer
+
 footer {
     background-image: url(../images/footer1.png);
     background-repeat: repeat;
@@ -86,6 +92,12 @@ footer {
     iframe {
         padding: 10px;
         margin-top: 2rem;
+    }
+}
+
+@media (max-width: 576px){
+    .mapa {
+        display: none;
     }
 }
 

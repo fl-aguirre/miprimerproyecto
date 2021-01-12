@@ -13,34 +13,36 @@
 
 /* Sobre mi */
 
-.fotoAle {
-    margin: 50px;
-    h1 {
-        font-size: 2rem;
-        color: $rosa;
-    }
+.aboutMe__img {
+    padding-left: 150px;
     img {
         box-shadow: 2px 2px 2px $negro;
     }
 }
 
-.sobreMi {
-    font-size: 1.5rem;
-    text-align: justify;
-    height: 200px;
-    width: 600px;
+.aboutMe__p {
+    margin-top: 50px;
+    padding-right: 150px;
+    h1 {
+        font-size: 2rem;
+        color: $rosa;
+    }
+    p {
+        font-size: 1.5rem;
+        text-align: justify;
+    }
 }
 
-/* Viviendas */
+@media (max-width: 992px) {
+    .aboutMe__p, .aboutMe__img {
+        padding-right: 150px;
+        padding-left: 150px;
+    }
+}
+
+/* Viviendas y Jardines*/
 
 %contenedor {
-    display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: auto;
-    justify-content: space-between;
-    align-items: center;
-    grid-template-areas:"imagen resena";
-    margin-left: 20px;
     h2 {
         color: $rosa;
     }
@@ -56,14 +58,12 @@
         color: $negro;
         background-image: linear-gradient(120deg, $blanco 0%, $rosa 100%);
         background-repeat: no-repeat;
-        background-size: 20% 0.2em;
+        background-size: 30rem 0.2em;
         background-position: 0 88%;
-        transition: background-size 0.5s ease-in;
-        &:hover {
-            background-size: 30% 0.2em;
-        }
     }
 }
+
+// Viviendas
 
 .contenedorV {
     @extend %contenedor;
@@ -73,23 +73,16 @@
     @extend %fondo;
 }
 
-.imagenV {
-    grid-area: imagen;
-}
-
 .tablaV {
-   font-size: 1.3rem;
-   grid-area: resena;
-   padding: 5rem;
+   font-size: 1rem;
+   margin-top: 30px;
 }
 
 ol {
     list-style: none;
-
 }
 
-
-/* Jardines */
+// Jardines
 
 .contenedorJ {
     @extend %contenedor;
@@ -99,13 +92,8 @@ ol {
     @extend %fondo;
 }
 
-.imagenJ {
-    grid-area: imagen;
-}
-
 .resenaJ {
     font-size: 1.5rem;
     padding: 5rem;
-    grid-area: resena;
-    align-self: center;
+    text-align: justify;
 }

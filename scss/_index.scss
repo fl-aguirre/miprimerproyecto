@@ -1,21 +1,24 @@
 // Index
 
 .mainSection {
-    background-image: url(../images/fondoFlor.jpg);
-    padding: 10rem;
+    background-image: url(../images/fondoHojas1.jpg);
+    background-repeat: no-repeat;
+    height: 500px;
 }
 
 .mainSection__h {
     font-weight: bolder;
-    font-size: 3rem;
+    font-size: 4rem;
     color: $blanco;
     text-shadow: 2px 2px 2px $negro;
+    padding: 15% 0 15% 15%;
 }
 
 .mainSection__p {
     font-weight: bold;
-    font-size: 1.6rem;
+    font-size: 2rem;
     text-align: left;
+    padding: 15% 15% 15% 0%;
     color: $blanco;
     text-shadow: 2px 2px 2px $negro;
     animation-name: fade;
