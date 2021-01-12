@@ -5,10 +5,11 @@
     padding: 10rem;
 }
 
-.mainSection_h {
+.mainSection__h {
     font-weight: bolder;
     font-size: 3rem;
     color: $blanco;
+    text-shadow: 2px 2px 2px $negro;
 }
 
 .mainSection__p {
@@ -16,10 +17,18 @@
     font-size: 1.6rem;
     text-align: left;
     color: $blanco;
-    text-transform: uppercase;
+    text-shadow: 2px 2px 2px $negro;
     animation-name: fade;
     animation-iteration-count: 1;
     animation-duration: 4s ;
+}
+
+.noStyle {
+    box-shadow: none;
+    transition: none;
+    &:hover {
+        transform: none ;
+    }
 }
 
 .link {
@@ -65,6 +74,7 @@ $lista: (1,2,3);
     .serviceSection#{$var} {
         i, h3, p {
         color: $blanco;
+        text-shadow: 2px 2px 2px $negro;
         position: relative;
         }
     }

@@ -29,7 +29,9 @@ body {
 nav {
     font-size: 1.5rem;
     opacity: 0.8;
-    color: $negro;
+    .dropdown-menu {
+        font-size: 1.5rem;
+    }
 }
 
 section {
@@ -53,6 +55,7 @@ article {
     }
 
     img {
+        box-shadow: 2px 2px 2px $negro;
         transition: all 0.5s;
         &:hover {
             transform: scale(1.01) ;
@@ -69,19 +72,21 @@ article {
 }
 
 footer {
-    background-image: linear-gradient(to bottom, $marron, $blanco);
+    background-image: url(../images/footer1.png);
+    background-repeat: repeat;
     font-weight: bold;
     height: 350px;
-    h3, i, p {
+    p a {
+        color: $negro;
+        font-size: 1.8rem;
+    }
+    i, p {
         color: $negro;
     }
     iframe {
         padding: 10px;
+        margin-top: 2rem;
     }
-}
-
-iframe {
-    margin-top: 2rem;
 }
 
 .datosContacto {
