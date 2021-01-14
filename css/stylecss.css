@@ -14,12 +14,18 @@
   font-weight: bold;
   font-size: 2rem;
   text-align: left;
-  padding: 15% 15% 15% 0%;
+  padding: 15% 15% 15% 5%;
   color: #ffffff;
   text-shadow: 2px 2px 2px #272727;
   animation-name: fade;
   animation-iteration-count: 1;
   animation-duration: 4s; }
+
+@media (max-width: 575px) {
+  .mainSection__p {
+    padding: 0 15% 0 15%; }
+  .mainSection__h {
+    padding: 15% 15% 0 15%; } }
 
 .noStyle {
   box-shadow: none;
@@ -168,6 +174,9 @@
 
 ol {
   list-style: none; }
+
+.contenedorJ img {
+  box-shadow: 2px 2px 2px #272727; }
 
 .resenaJ {
   font-size: 1.5rem;

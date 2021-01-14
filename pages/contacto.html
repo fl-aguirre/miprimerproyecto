@@ -51,33 +51,35 @@
             </nav>
         </header>
         <main>
+
             <!--Contacto-->
             <section class="mx-auto cuadroCont animate__animated animate__fadeInLeft">
-                <form action="" method="GET" enctype="">
+                <form action="../script/correo.php" method="POST" enctype="">
                     <fieldset>
                         <legend><h1>Contacto</h1></legend>
                         <input class="form-control form-control-lg" type="text" name="nombre" id="nombre" placeholder="Nombre">
                         <input class="form-control form-control-lg" type="text" name="apellido" id="apellido" placeholder="Apellido">
                         <input class="form-control form-control-lg" type="email" name="email" id="email" placeholder="Email"><br>
-                        <label for="descub">¿Cómo nos descubriste?</label>
-                        <select class="custom-select custom-select-lg" name="descubrimiento" id="descub">
+                        <label for="red">¿Cómo nos descubriste?</label>
+                        <select class="custom-select custom-select-lg" name="red" id="red">
                             <option value="facebook">Facebook</option>
                             <option value="instagram">Instagram</option>
                             <option value="web">Sitio web</option>
                             <option value="otros">Otros</option>
                         </select>
                         <div>
-                            <input type="checkbox" name="novedades" value="novedades" id="novedad">
-                            <label for="novedad">¿Desea recibir novedades?</label><br>
+                            <input type="checkbox" name="news" value="si" id="news">
+                            <label for="news">¿Desea recibir novedades?</label><br>
                         </div>
                         <input class="form-control form-control-lg" type="text" name="asunto" id="asunto" placeholder="Asunto"><br>
-                        <textarea class="form-control form-control-lg" name="consulta" placeholder="Ingrese su consulta"></textarea><br>
-                        <input class="form-control form-control-lg" type="submit" value="Enviar">
-                        <input class="form-control form-control-lg" type="reset" value="Restablecer">
+                        <textarea class="form-control form-control-lg" name="msg" placeholder="Ingrese su consulta"></textarea><br>
+                        <input class="form-control form-control-lg" type="submit" name="enviar" value="Enviar">
+                        <input class="form-control form-control-lg" type="reset" name="restablecer" value="Restablecer">
                     </fieldset>
                 </form>          
             </section>
         </main>
+
          <!--Footer-->
          <footer class="container-fluid">
             <div class="row">
@@ -122,8 +124,8 @@
         <script src="https://kit.fontawesome.com/32a702b04e.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="../js/bootstrap.min.js"></script>
-        <script src="../js/wow.min.js"></script>
+        <script src="../script/bootstrap.min.js"></script>
+        <script src="../script/wow.min.js"></script>
         <script>
         new WOW().init();
         </script>

@@ -86,6 +86,9 @@ ol {
 
 .contenedorJ {
     @extend %contenedor;
+    img {
+        box-shadow: 2px 2px 2px $negro;
+    }
 }
 
 .fondoJ {
