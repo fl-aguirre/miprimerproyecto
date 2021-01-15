@@ -27,12 +27,6 @@
   .mainSection__h {
     padding: 15% 15% 0 15%; } }
 
-.align1 {
-  padding-left: 100px; }
-
-.align2 {
-  padding-right: 100px; }
-
 .noStyle {
   box-shadow: none;
   transition: none; }
