@@ -27,6 +27,12 @@
   .mainSection__h {
     padding: 15% 15% 0 15%; } }
 
+.align1 {
+  padding-left: 100px; }
+
+.align2 {
+  padding-right: 100px; }
+
 .noStyle {
   box-shadow: none;
   transition: none; }
@@ -207,7 +213,7 @@ body {
 
 nav {
   font-size: 1.5rem;
-  opacity: 0.8; }
+  opacity: 0.95; }
   nav .dropdown-menu {
     font-size: 1.5rem; }
 
