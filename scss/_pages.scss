@@ -1,7 +1,82 @@
+/* Viviendas y Jardines*/
+
+%fondo {
+    h1 {
+        display: none;
+    }
+}
+
+// Viviendas
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-gap: 10px;
+    overflow: hidden;
+    .gallery__img {
+        width: 100%;
+        height: 300px;
+        transition: all 0.5s;
+        &:hover {
+        transform: scale(1.01) ;
+        }
+    }
+}
+
+.fondoV {
+    @extend %fondo;
+}
+
+// Jardines
+
+.contain {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.contain__effect {
+    display: grid;
+    position: relative;
+    height: 500px;
+    text-align: center;
+    color: transparent;
+    align-content: center;
+    transition: 0.5s ease;
+    h2 {
+        text-transform: uppercase;
+    }
+    p {
+        color: transparent;
+    }
+    &:hover {
+      background-color: $gris-fondo-trans;
+      font-weight: bolder;
+      h2{
+          color: $negro;
+      }
+      p {
+          color: $rosa;
+        }
+    }
+}
+
+.background__image {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: -1;
+}
+
+.fondoJ {
+    @extend %fondo;
+}
+
 
 /* Contacto */
 
 .cuadroCont {
+    margin-top: 50px;
     text-align: justify;
     font-size: 1.5rem;
     line-height: 3rem;
@@ -15,13 +90,14 @@
 
 .aboutMe__img {
     padding-left: 150px;
+    margin-top: 50px;
     img {
         box-shadow: 2px 2px 2px $negro;
     }
 }
 
 .aboutMe__p {
-    margin-top: 50px;
+    margin-top: 100px;
     padding-right: 150px;
     h1 {
         font-size: 2rem;
@@ -38,65 +114,4 @@
         padding-right: 150px;
         padding-left: 150px;
     }
-}
-
-/* Viviendas y Jardines*/
-
-%contenedor {
-    h2 {
-        color: $rosa;
-    }
-}
-
-%fondo {
-    height: 150px;
-    padding: 50px;
-    margin-bottom: 20px;
-    text-align: left;
-    h1 {
-        font-size: 2.8rem;
-        color: $negro;
-        background-image: linear-gradient(120deg, $blanco 0%, $rosa 100%);
-        background-repeat: no-repeat;
-        background-size: 30rem 0.2em;
-        background-position: 0 88%;
-    }
-}
-
-// Viviendas
-
-.contenedorV {
-    @extend %contenedor;
-}
-
-.fondoV {
-    @extend %fondo;
-}
-
-.tablaV {
-   font-size: 1rem;
-   margin-top: 30px;
-}
-
-ol {
-    list-style: none;
-}
-
-// Jardines
-
-.contenedorJ {
-    @extend %contenedor;
-    img {
-        box-shadow: 2px 2px 2px $negro;
-    }
-}
-
-.fondoJ {
-    @extend %fondo;
-}
-
-.resenaJ {
-    font-size: 1.5rem;
-    padding: 5rem;
-    text-align: justify;
 }

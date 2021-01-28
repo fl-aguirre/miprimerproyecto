@@ -36,7 +36,6 @@
 }
 
 .noStyle {
-    box-shadow: none;
     transition: none;
     &:hover {
         transform: none ;
@@ -53,7 +52,7 @@
 }
 
 .divId {
-    padding: 55px;
+    height: 89px;
 }
 
 $lista: (1,2,3);
@@ -69,6 +68,7 @@ $lista: (1,2,3);
         border: $gris-claro;
         height: 250px;
         padding: 50px;
+        margin-bottom: 75px;
         position: relative;
     }
 

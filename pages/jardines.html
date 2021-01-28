@@ -8,6 +8,7 @@
         <meta name="title" content="Jardines">
         <title>Jardines</title>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/animate.min.css"/>
         <link rel="stylesheet" href="../css/stylecss.css" type="text/css"/>
@@ -15,10 +16,10 @@
     <body>
         <header class="sticky-top">
             <!--Barra de navegación-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div>
                     <a href="../index.html">
-                        <img src="../images/logo.png" alt="Logo del encabezado grande" width="100" height="100">
+                        <img src="../images/logo.png" alt="Logo del encabezado grande" width="80" height="80">
                     </a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,13 +27,13 @@
                   </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav text-center">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#servicios">Servicios</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Proyectos
                           </a>
@@ -50,39 +51,44 @@
             </nav>
         </header>
         <main class="container-fluid">
+
             <!--Jardines-->
             <div class="fondoJ wow animate__animated animate__fadeInLeft">
                 <h1>
                     Jardines
                 </h1>
             </div>
-            <section class="contenedorJ row">
-                <div class="text-center col-lg-6 col-md-12 col-sm-12 wow animate__animated animate__fadeInLeft">
-                    <img src="../images/imagen4.jpg" alt="Imagen 4" class="img-fluid" width="400">
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 resenaJ wow animate__animated animate__fadeInRight">
-                    <h2>
-                        Jardines y decoración
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id expedita eum odio quos cupiditate molestias accusantium eligendi dolore, optio molestiae, voluptate quam. Esse ipsa aliquam, ut quam similique repudiandae animi.
-                    </p>
-                </div>
-            </section>
-            <section class="contenedorJ row">
-                <div class="text-center col-lg-6 col-md-12 col-sm-12 wow animate__animated animate__fadeInLeft">
-                    <img src="../images/imagen5.jpg" alt="Imagen 5" class="img-fluid" width="400">
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 resenaJ wow animate__animated animate__fadeInRight">
+            <section class="contain">
+                <div class="contain__effect wow animate__animated animate__fadeInUp animate__delay-1s">
+                    <img src="../images/imagenjardin1.jpg" alt="Imagen jardin 1" class="background__image img-fluid">
                     <h2>
                         Jardines verticales
                     </h2>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam nulla iusto unde recusandae tenetur qui amet praesentium, sapiente quasi eveniet blanditiis alias repudiandae laudantium cum ad culpa provident exercitationem omnis!
+                    Lorem ipsum dolor sit amet.
+                    </p>
+                </div>
+                <div class="contain__effect wow animate__animated animate__fadeInUp animate__delay-2s">
+                    <img src="../images/imagenjardin4.jpeg" alt="Imagen jardin 2" class="background__image img-fluid">
+                    <h2>
+                        Decoración
+                    </h2>
+                    <p>
+                    Lorem ipsum dolor sit amet.
+                    </p>
+                </div>
+                <div class="contain__effect wow animate__animated animate__fadeInUp animate__delay-3s">
+                    <img src="../images/imagenjardin3.jpeg" alt="Imagen jardin 3" class="background__image img-fluid">
+                    <h2>
+                        Paisajes
+                    </h2>
+                    <p>
+                    Lorem ipsum dolor sit amet.
                     </p>
                 </div>
             </section>
         </main>
+
          <!--Footer-->
          <footer class="container-fluid">
             <div class="row">

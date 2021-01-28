@@ -6,6 +6,7 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    // outline: solid 1px tomato !important;
 }
 
 @keyframes fade {
@@ -19,7 +20,7 @@ html {
 
 body {
     color:$negro;
-    background-color: $gris-fondo;
+    background: $fondo-gradiente;
     font-family: 'Montserrat', serif;
     animation-name: fade;
     animation-iteration-count: 1;
@@ -33,6 +34,18 @@ nav {
     opacity: 0.95;
     .dropdown-menu {
         font-size: 1.5rem;
+    }
+}
+
+.dropdown .dropdown-menu {
+    background-color: $bg-dark;
+}
+
+.dropdown-menu .dropdown-item {
+    background-color: $bg-dark; 
+    color: rgba(255,255,255,.5);
+    &:hover{
+        color: rgba(255,255,255,.75)
     }
 }
 
@@ -54,12 +67,13 @@ a {
 article {
     h2 {
         margin: 10px 0px 10px 0px;
+        padding: 15px;
         font-size: 1.8rem;
         color: $negro;
     }
 
     img {
-        box-shadow: 2px 2px 2px $negro;
+        box-shadow: 0 0 6px $negro;
         transition: all 0.5s;
         &:hover {
             transform: scale(1.01) ;
@@ -68,7 +82,7 @@ article {
 
     p {
         margin-top: 10px;
-        text-align: justify;
+        padding: 15px;
         font-size: 1.5rem;
         line-height: 20px;
         color: $negro;
@@ -93,6 +107,14 @@ footer {
         padding: 10px;
         margin-top: 2rem;
     }
+}
+
+.mapa {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 
 @media (max-width: 576px){

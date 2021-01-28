@@ -28,7 +28,6 @@
     padding: 15% 15% 0 15%; } }
 
 .noStyle {
-  box-shadow: none;
   transition: none; }
   .noStyle:hover {
     transform: none; }
@@ -41,7 +40,7 @@
     font-weight: bold; }
 
 .divId {
-  padding: 55px; }
+  height: 89px; }
 
 .serviceSection1 {
   background-image: url(../images/imagen6.jpg);
@@ -52,6 +51,7 @@
   border: #dfdcda;
   height: 250px;
   padding: 50px;
+  margin-bottom: 75px;
   position: relative; }
 
 .serviceSection1:before {
@@ -78,6 +78,7 @@
   border: #dfdcda;
   height: 250px;
   padding: 50px;
+  margin-bottom: 75px;
   position: relative; }
 
 .serviceSection2:before {
@@ -104,6 +105,7 @@
   border: #dfdcda;
   height: 250px;
   padding: 50px;
+  margin-bottom: 75px;
   position: relative; }
 
 .serviceSection3:before {
@@ -121,8 +123,56 @@
   text-shadow: 2px 2px 2px #272727;
   position: relative; }
 
+/* Viviendas y Jardines*/
+.fondoV h1, .fondoJ h1 {
+  display: none; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-gap: 10px;
+  overflow: hidden; }
+  .gallery .gallery__img {
+    width: 100%;
+    height: 300px;
+    transition: all 0.5s; }
+    .gallery .gallery__img:hover {
+      transform: scale(1.01); }
+
+.contain {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); }
+
+.contain__effect {
+  display: grid;
+  position: relative;
+  height: 500px;
+  text-align: center;
+  color: transparent;
+  align-content: center;
+  transition: 0.5s ease; }
+  .contain__effect h2 {
+    text-transform: uppercase; }
+  .contain__effect p {
+    color: transparent; }
+  .contain__effect:hover {
+    background-color: #f8f7f6e7;
+    font-weight: bolder; }
+    .contain__effect:hover h2 {
+      color: #272727; }
+    .contain__effect:hover p {
+      color: #d8395e; }
+
+.background__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  z-index: -1; }
+
 /* Contacto */
 .cuadroCont {
+  margin-top: 50px;
   text-align: justify;
   font-size: 1.5rem;
   line-height: 3rem;
@@ -132,12 +182,13 @@
 
 /* Sobre mi */
 .aboutMe__img {
-  padding-left: 150px; }
+  padding-left: 150px;
+  margin-top: 50px; }
   .aboutMe__img img {
     box-shadow: 2px 2px 2px #272727; }
 
 .aboutMe__p {
-  margin-top: 50px;
+  margin-top: 100px;
   padding-right: 150px; }
   .aboutMe__p h1 {
     font-size: 2rem;
@@ -150,38 +201,6 @@
   .aboutMe__p, .aboutMe__img {
     padding-right: 150px;
     padding-left: 150px; } }
-
-/* Viviendas y Jardines*/
-.contenedorV h2, .contenedorJ h2 {
-  color: #d8395e; }
-
-.fondoV, .fondoJ {
-  height: 150px;
-  padding: 50px;
-  margin-bottom: 20px;
-  text-align: left; }
-  .fondoV h1, .fondoJ h1 {
-    font-size: 2.8rem;
-    color: #272727;
-    background-image: linear-gradient(120deg, #ffffff 0%, #d8395e 100%);
-    background-repeat: no-repeat;
-    background-size: 30rem 0.2em;
-    background-position: 0 88%; }
-
-.tablaV {
-  font-size: 1rem;
-  margin-top: 30px; }
-
-ol {
-  list-style: none; }
-
-.contenedorJ img {
-  box-shadow: 2px 2px 2px #272727; }
-
-.resenaJ {
-  font-size: 1.5rem;
-  padding: 5rem;
-  text-align: justify; }
 
 * {
   margin: 0;
@@ -199,7 +218,7 @@ html {
 
 body {
   color: #272727;
-  background-color: #f8f7f6;
+  background: linear-gradient(141deg, #f8f9fa 25%, #eee 40%, #ddd 55%);
   font-family: 'Montserrat', serif;
   animation-name: fade;
   animation-iteration-count: 1;
@@ -210,6 +229,15 @@ nav {
   opacity: 0.95; }
   nav .dropdown-menu {
     font-size: 1.5rem; }
+
+.dropdown .dropdown-menu {
+  background-color: #343a40; }
+
+.dropdown-menu .dropdown-item {
+  background-color: #343a40;
+  color: rgba(255, 255, 255, 0.5); }
+  .dropdown-menu .dropdown-item:hover {
+    color: rgba(255, 255, 255, 0.75); }
 
 section {
   margin-bottom: 150px; }
@@ -223,18 +251,19 @@ a {
 
 article h2 {
   margin: 10px 0px 10px 0px;
+  padding: 15px;
   font-size: 1.8rem;
   color: #272727; }
 
 article img {
-  box-shadow: 2px 2px 2px #272727;
+  box-shadow: 0 0 6px #272727;
   transition: all 0.5s; }
   article img:hover {
     transform: scale(1.01); }
 
 article p {
   margin-top: 10px;
-  text-align: justify;
+  padding: 15px;
   font-size: 1.5rem;
   line-height: 20px;
   color: #272727; }
@@ -252,6 +281,13 @@ footer {
   footer iframe {
     padding: 10px;
     margin-top: 2rem; }
+
+.mapa {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  -o-filter: grayscale(100%);
+  filter: grayscale(100%); }
 
 @media (max-width: 576px) {
   .mapa {

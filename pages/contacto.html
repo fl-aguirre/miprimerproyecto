@@ -8,6 +8,7 @@
         <meta name="title" content="Contacto">
         <title>Contacto</title>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500;600;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/animate.min.css"/>
         <link rel="stylesheet" href="../css/stylecss.css" type="text/css"/>
@@ -16,10 +17,10 @@
     <body>
         <header class="sticky-top">
             <!--Barra de navegación-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div>
                     <a href="../index.html">
-                        <img src="../images/logo.png" alt="Logo del encabezado grande" width="100" height="100">
+                        <img src="../images/logo.png" alt="Logo del encabezado grande" width="80" height="80">
                     </a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -27,7 +28,7 @@
                   </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav text-center">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
@@ -43,7 +44,7 @@
                           </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre mi</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="contacto.html">Contacto</a></li>
                     <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/Mara-Arquitectura-y-Disen%CC%83o-107625827638149"><i class="fab fa-facebook-square fa-lg"></i></a></li>
                     <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/mara.arquitectura/"><i class="fab fa-instagram fa-lg"></i></a></li>
                 </ul>
@@ -55,26 +56,42 @@
             <!--Contacto-->
             <section class="mx-auto cuadroCont animate__animated animate__fadeInLeft">
                 <form action="../script/correo.php" method="POST" enctype="">
-                    <fieldset>
+                    <fieldset class="form-row">
                         <legend><h1>Contacto</h1></legend>
-                        <input class="form-control form-control-lg" type="text" name="nombre" id="nombre" placeholder="Nombre">
-                        <input class="form-control form-control-lg" type="text" name="apellido" id="apellido" placeholder="Apellido">
-                        <input class="form-control form-control-lg" type="email" name="email" id="email" placeholder="Email"><br>
-                        <label for="red">¿Cómo nos descubriste?</label>
-                        <select class="custom-select custom-select-lg" name="red" id="red">
-                            <option value="facebook">Facebook</option>
-                            <option value="instagram">Instagram</option>
-                            <option value="web">Sitio web</option>
-                            <option value="otros">Otros</option>
-                        </select>
-                        <div>
+                        <div class="col-6">
+                            <input class="form-control form-control-lg" type="text" name="nombre" id="nombre" placeholder="Nombre">
+                        </div>
+                        <div class="col-6 mb-2">
+                            <input class="form-control form-control-lg" type="text" name="apellido" id="apellido" placeholder="Apellido">
+                        </div>
+                        <div class="col-12 mb-2">
+                            <input class="form-control form-control-lg" type="email" name="email" id="email" placeholder="Email"><br>
+                        </div>
+                        <div class="col-12 mb-5">
+                            <label for="red">¿Cómo nos descubriste?</label>
+                            <select class="custom-select custom-select-lg" name="red" id="red">
+                                <option value="facebook">Facebook</option>
+                                <option value="instagram">Instagram</option>
+                                <option value="web">Sitio web</option>
+                                <option value="otros">Otros</option>
+                            </select>
+                        </div>  
+                        <div class="col-12 mb-5">
                             <input type="checkbox" name="news" value="si" id="news">
                             <label for="news">¿Desea recibir novedades?</label><br>
                         </div>
-                        <input class="form-control form-control-lg" type="text" name="asunto" id="asunto" placeholder="Asunto"><br>
-                        <textarea class="form-control form-control-lg" name="msg" placeholder="Ingrese su consulta"></textarea><br>
-                        <input class="form-control form-control-lg" type="submit" name="enviar" value="Enviar">
-                        <input class="form-control form-control-lg" type="reset" name="restablecer" value="Restablecer">
+                        <div class="col-12 mb-1">
+                            <input class="form-control form-control-lg" type="text" name="asunto" id="asunto" placeholder="Asunto"><br>
+                        </div>
+                        <div class="col-12 mb-1">
+                            <textarea class="form-control form-control-lg" name="msg" placeholder="Ingrese su consulta"></textarea><br>    
+                        </div>
+                        <div class="col-6">
+                            <input class="form-control form-control-lg" type="submit" name="enviar" value="Enviar">
+                        </div>
+                        <div class="col-6">
+                            <input class="form-control form-control-lg" type="reset" name="restablecer" value="Restablecer">
+                        </div>
                     </fieldset>
                 </form>          
             </section>

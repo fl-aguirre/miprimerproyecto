@@ -8,17 +8,19 @@
         <meta name="title" content="Viviendas">
         <title>Viviendas</title>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <link rel="stylesheet" href="../css/animate.min.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/baguetteBox.min.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/bootstrap.min.css" type="text/css"/>
+        <link rel="stylesheet" href="../css/animate.min.css" type="text/css"/>
         <link rel="stylesheet" href="../css/stylecss.css" type="text/css"/>
     </head>
     <body>
         <header class="sticky-top">
             <!--Barra de navegación-->
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div>
                     <a href="../index.html">
-                        <img src="../images/logo.png" alt="Logo del encabezado grande" width="100" height="100">
+                        <img src="../images/logo.png" alt="Logo del encabezado grande" width="80" height="80">
                     </a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,13 +28,13 @@
                   </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
                 <ul class="navbar-nav text-center">
-                    <li class="nav-item active">
+                    <li class="nav-item">
                         <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html#servicios">Servicios</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Proyectos
                           </a>
@@ -50,64 +52,32 @@
             </nav>
         </header>
         <main class="container-fluid">
+
             <!--Viviendas-->
             <div class="fondoV wow animate__animated animate__fadeInLeft">
                 <h1>
                     Viviendas
                 </h1>
             </div>
-            <section class="contenedorV row">
-                <div class="col-lg-6 col-md-12 col-sm-12 wow animate__animated animate__fadeInLeft">
-                    <img src="../images/imagen2.jpg" alt="Imagen 1" class="img-fluid">
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 tablaV wow animate__animated animate__fadeInRight">
-                    <table border="1" cellpadding="5" cellspacing="0" class="table">
-                        <tr>
-                            <h2><th>Proyecto 1</th></h2>
-                            <th>Ubicación</th>
-                            <th>Año</th>
-                            <th>Detalles</th>
-                        </tr>
-                        <tr>
-                            <td>Bella Vista</td>
-                            <td>Barrio Jardín</td>
-                            <td>2017</td>
-                            <td><ol>
-                                    <li>400 m2</li>
-                                    <li>Cuatro habitaciones</li>
-                                    <li>Dos baños</li>
-                                </ol>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
-            </section>
-            <section class="contenedorV row">
-                <div class="col-lg-6 col-md-12 col-sm-12 wow animate__animated animate__fadeInLeft">
-                    <img src="../images/imagen3.jpg" alt="Imagen 2" class="img-fluid">
-                </div>
-                <div class="col-lg-6 col-md-12 col-sm-12 tablaV wow animate__animated animate__fadeInRight">
-                    <table border="1" cellpadding="5" cellspacing="0" class="table">
-                        <tr>
-                            <h2><th>Proyecto 2</th></h2>
-                            <th>Ubicación</th>
-                            <th>Año</th>
-                            <th>Detalles</th>
-                        </tr>
-                        <tr>
-                            <td>La Serena</td>
-                            <td>Barrio Urca</td>
-                            <td>2018</td>
-                            <td>
-                                <ol>
-                                    <li>500 m2</li>
-                                    <li>Cinco habitaciones</li>
-                                    <li>Dos baños</li>
-                                </ol>
-                            </td>
-                        </tr>
-                    </table>
-                </div>
+            <section class="gallery">
+                <a href="../images/imagenobra1.jpg" data-caption="Image caption">
+                    <img src="../images/imagenobra1.jpg" alt="Imagen obra 1" width="550" class="gallery__img img-fluid wow animate__animated animate__fadeInLeft">
+                </a>
+                <a href="../images/imagenobra2.jpg" data-caption="Image caption">
+                    <img src="../images/imagenobra2.jpg" alt="Imagen obra 2" width="550" class="gallery__img img-fluid wow animate__animated animate__fadeInRight">
+                </a>
+                <a href="../images/imagenobra3.jpg" data-caption="Image caption">
+                    <img src="../images/imagenobra3.jpg" alt="Imagen obra 3" width="550" class="gallery__img img-fluid wow animate__animated animate__fadeInLeft">
+                </a>
+                <a href="../images/imagenobra4.png" data-caption="Image caption">
+                    <img src="../images/imagenobra4.png" alt="Imagen obra 4" width="550" class="gallery__img img-fluid wow animate__animated animate__fadeInRight">
+                </a>
+                <a href="../images/imagenobra5.jpg" data-caption="Image caption">
+                    <img src="../images/imagenobra5.jpg" alt="Imagen obra 5" width="550" class="gallery__img img-fluid wow animate__animated animate__fadeInLeft">
+                </a>
+                <a href="../images/imagenobra6.jpg" data-caption="Image caption">
+                    <img src="../images/imagenobra6.jpg" alt="Imagen obra 6" width="550" class="gallery__img img-fluid wow animate__animated animate__fadeInRight">
+                </a>
             </section>
         </main>
          <!--Footer-->
@@ -158,6 +128,12 @@
         <script src="../script/wow.min.js"></script>
         <script>
         new WOW().init();
+        </script>
+        <script src="../script/baguetteBox.min.js" async></script>
+        <script>
+            window.addEventListener('load', function() {
+              baguetteBox.run('.gallery');
+            });
         </script>
     </body>
 </html>
