@@ -40,7 +40,7 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="viviendas.html">Viviendas</a>
-                            <a class="dropdown-item" href="jardines.html">Jardines</a>
+                            <a class="dropdown-item" href="jardines.html">Paisajes y jardines</a>
                           </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre mi</a></li>
@@ -64,21 +64,21 @@
                         <div class="col-6 mb-2">
                             <input class="form-control form-control-lg" type="text" name="apellido" id="apellido" placeholder="Apellido">
                         </div>
-                        <div class="col-12 mb-2">
+                        <div class="col-6 mb-2">
                             <input class="form-control form-control-lg" type="email" name="email" id="email" placeholder="Email"><br>
                         </div>
                         <div class="col-12 mb-5">
-                            <label for="red">¿Cómo nos descubriste?</label>
-                            <select class="custom-select custom-select-lg" name="red" id="red">
+                            <label class="col-12" for="red">¿Cómo nos descubriste?</label>
+                            <select class="col-6 custom-select custom-select-lg" name="red" id="red">
                                 <option value="facebook">Facebook</option>
                                 <option value="instagram">Instagram</option>
                                 <option value="web">Sitio web</option>
                                 <option value="otros">Otros</option>
                             </select>
                         </div>  
-                        <div class="col-12 mb-5">
-                            <input type="checkbox" name="news" value="si" id="news">
-                            <label for="news">¿Desea recibir novedades?</label><br>
+                        <div class="mb-5 col-12">
+                            <input type="checkbox" name="news" value="si" id="news" class="col-1">
+                            <label for="news" class="col-10">¿Desea recibir novedades?</label><br>
                         </div>
                         <div class="col-12 mb-1">
                             <input class="form-control form-control-lg" type="text" name="asunto" id="asunto" placeholder="Asunto"><br>
@@ -144,7 +144,7 @@
         <script src="../script/bootstrap.min.js"></script>
         <script src="../script/wow.min.js"></script>
         <script>
-        new WOW().init();
+            new WOW().init();
         </script>
     </body>
 </html>

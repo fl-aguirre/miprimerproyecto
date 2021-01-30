@@ -55,6 +55,10 @@
     height: 89px;
 }
 
+.service {
+    margin-bottom: 250px;
+}
+
 $lista: (1,2,3);
 
 
@@ -62,13 +66,12 @@ $lista: (1,2,3);
     .serviceSection#{$var} {
         background-image: url(../images/imagen#{$var+5}.jpg) ;
         background-repeat: round;
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         color:$negro;
         text-align: center;
         border: $gris-claro;
         height: 250px;
         padding: 50px;
-        margin-bottom: 75px;
         position: relative;
     }
 

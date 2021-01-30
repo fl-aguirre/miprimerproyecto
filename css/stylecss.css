@@ -42,16 +42,18 @@
 .divId {
   height: 89px; }
 
+.service {
+  margin-bottom: 250px; }
+
 .serviceSection1 {
   background-image: url(../images/imagen6.jpg);
   background-repeat: round;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #272727;
   text-align: center;
   border: #dfdcda;
   height: 250px;
   padding: 50px;
-  margin-bottom: 75px;
   position: relative; }
 
 .serviceSection1:before {
@@ -72,13 +74,12 @@
 .serviceSection2 {
   background-image: url(../images/imagen7.jpg);
   background-repeat: round;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #272727;
   text-align: center;
   border: #dfdcda;
   height: 250px;
   padding: 50px;
-  margin-bottom: 75px;
   position: relative; }
 
 .serviceSection2:before {
@@ -99,13 +100,12 @@
 .serviceSection3 {
   background-image: url(../images/imagen8.jpg);
   background-repeat: round;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #272727;
   text-align: center;
   border: #dfdcda;
   height: 250px;
   padding: 50px;
-  margin-bottom: 75px;
   position: relative; }
 
 .serviceSection3:before {
@@ -127,41 +127,75 @@
 .fondoV h1, .fondoJ h1 {
   display: none; }
 
-.gallery {
+.containV {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
-  overflow: hidden; }
-  .gallery .gallery__img {
+  overflow: hidden;
+  justify-content: center; }
+  .containV .containV__img {
     width: 100%;
     height: 300px;
     transition: all 0.5s; }
-    .gallery .gallery__img:hover {
+    .containV .containV__img:hover {
       transform: scale(1.01); }
 
-.contain {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); }
+@media (min-width: 1200px) {
+  .containV {
+    grid-template-columns: repeat(2, 61.7rem); } }
 
-.contain__effect {
+@media (max-width: 922px) {
+  .containV {
+    grid-template-columns: 61.7rem; } }
+
+@media (max-width: 620px) {
+  .containV {
+    grid-template-rows: 1fr; } }
+
+.containJ {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center; }
+
+@media (min-width: 1200px) {
+  .containJ {
+    grid-template-columns: repeat(3, 36rem); } }
+
+@media (max-width: 922px) {
+  .containJ {
+    grid-template-columns: 36rem; } }
+
+@media (max-width: 400px) {
+  .containJ {
+    grid-template-rows: 1fr; } }
+
+.containJ__effect {
   display: grid;
   position: relative;
-  height: 500px;
+  height: 48rem;
   text-align: center;
   color: transparent;
   align-content: center;
-  transition: 0.5s ease; }
-  .contain__effect h2 {
-    text-transform: uppercase; }
-  .contain__effect p {
-    color: transparent; }
-  .contain__effect:hover {
-    background-color: #f8f7f6e7;
-    font-weight: bolder; }
-    .contain__effect:hover h2 {
+  transition: 0.5s ease-in-out;
+  font-weight: bold; }
+  .containJ__effect h2 {
+    text-transform: uppercase;
+    transition: color 0.5s; }
+  .containJ__effect p {
+    font-size: 1.2rem;
+    color: transparent;
+    transition: color 0.5s; }
+  .containJ__effect:hover {
+    background-color: #f8f7f6e7; }
+    .containJ__effect:hover h2 {
       color: #272727; }
-    .contain__effect:hover p {
+    .containJ__effect:hover p {
       color: #d8395e; }
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: absolute; }
 
 .background__image {
   width: 100%;
@@ -173,34 +207,30 @@
 /* Contacto */
 .cuadroCont {
   margin-top: 50px;
-  text-align: justify;
+  max-width: 576px;
   font-size: 1.5rem;
   line-height: 3rem;
-  width: 50%; }
+  width: 60%; }
   .cuadroCont h1 {
     font-size: 2rem; }
 
 /* Sobre mi */
-.aboutMe__img {
-  padding-left: 150px;
+.aboutMe {
   margin-top: 50px; }
-  .aboutMe__img img {
+  .aboutMe img {
     box-shadow: 2px 2px 2px #272727; }
 
 .aboutMe__p {
-  margin-top: 100px;
-  padding-right: 150px; }
+  padding: 6rem 6rem 0 0; }
   .aboutMe__p h1 {
     font-size: 2rem;
     color: #d8395e; }
   .aboutMe__p p {
-    font-size: 1.5rem;
-    text-align: justify; }
+    font-size: 1.5rem; }
 
 @media (max-width: 992px) {
-  .aboutMe__p, .aboutMe__img {
-    padding-right: 150px;
-    padding-left: 150px; } }
+  .aboutMe__p {
+    padding: 15px; } }
 
 * {
   margin: 0;
@@ -231,7 +261,8 @@ nav {
     font-size: 1.5rem; }
 
 .dropdown .dropdown-menu {
-  background-color: #343a40; }
+  background-color: #343a40;
+  text-align: center; }
 
 .dropdown-menu .dropdown-item {
   background-color: #343a40;

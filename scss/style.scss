@@ -6,7 +6,6 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
-    // outline: solid 1px tomato !important;
 }
 
 @keyframes fade {
@@ -39,6 +38,7 @@ nav {
 
 .dropdown .dropdown-menu {
     background-color: $bg-dark;
+    text-align: center;
 }
 
 .dropdown-menu .dropdown-item {

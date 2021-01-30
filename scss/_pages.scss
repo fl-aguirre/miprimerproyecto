@@ -8,12 +8,13 @@
 
 // Viviendas
 
-.gallery {
+.containV {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     overflow: hidden;
-    .gallery__img {
+    justify-content: center;
+    .containV__img {
         width: 100%;
         height: 300px;
         transition: all 0.5s;
@@ -23,34 +24,75 @@
     }
 }
 
+@media (min-width: 1200px) {
+    .containV {
+        grid-template-columns: repeat(2, 61.7rem);
+    }
+}
+
+@media (max-width: 922px) {
+    .containV {
+        grid-template-columns: 61.7rem;
+    }
+}
+
+@media (max-width: 620px) {
+    .containV {
+        grid-template-rows: 1fr;
+
+    }
+}
+
 .fondoV {
     @extend %fondo;
 }
 
-// Jardines
+// Paisajes y jardines
 
-.contain {
+.containJ {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
 }
 
-.contain__effect {
+@media (min-width: 1200px) {
+    .containJ {
+        grid-template-columns: repeat(3, 36rem);
+    }
+}
+
+@media (max-width: 922px) {
+    .containJ {
+        grid-template-columns: 36rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .containJ {
+        grid-template-rows: 1fr;
+    }
+}
+
+.containJ__effect {
     display: grid;
     position: relative;
-    height: 500px;
+    height: 48rem;
     text-align: center;
     color: transparent;
     align-content: center;
-    transition: 0.5s ease;
+    transition: 0.5s ease-in-out;
+    font-weight: bold;
     h2 {
         text-transform: uppercase;
+        transition: color 0.5s;
     }
     p {
+        font-size: 1.2rem;
         color: transparent;
+        transition: color 0.5s;
     }
     &:hover {
       background-color: $gris-fondo-trans;
-      font-weight: bolder;
       h2{
           color: $negro;
       }
@@ -58,6 +100,12 @@
           color: $rosa;
         }
     }
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 .background__image {
@@ -77,10 +125,10 @@
 
 .cuadroCont {
     margin-top: 50px;
-    text-align: justify;
+    max-width: 576px;
     font-size: 1.5rem;
     line-height: 3rem;
-    width: 50%;
+    width: 60%;
     h1 {
         font-size: 2rem;
     }
@@ -88,8 +136,7 @@
 
 /* Sobre mi */
 
-.aboutMe__img {
-    padding-left: 150px;
+.aboutMe {
     margin-top: 50px;
     img {
         box-shadow: 2px 2px 2px $negro;
@@ -97,21 +144,18 @@
 }
 
 .aboutMe__p {
-    margin-top: 100px;
-    padding-right: 150px;
+    padding: 6rem 6rem 0 0;
     h1 {
         font-size: 2rem;
         color: $rosa;
     }
     p {
         font-size: 1.5rem;
-        text-align: justify;
     }
 }
 
 @media (max-width: 992px) {
-    .aboutMe__p, .aboutMe__img {
-        padding-right: 150px;
-        padding-left: 150px;
+    .aboutMe__p {
+    padding: 15px;
     }
 }

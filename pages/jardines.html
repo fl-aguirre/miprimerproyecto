@@ -7,14 +7,17 @@
         <meta name="keywords" content="Arquitectura Jardines Paisajes Parques Diseño">
         <meta name="title" content="Jardines">
         <title>Jardines</title>
+        <link rel="shortcut icon" href="../images/logo1.png" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/baguetteBox.min.css" type="text/css"/>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" href="../css/animate.min.css"/>
         <link rel="stylesheet" href="../css/stylecss.css" type="text/css"/>
     </head>
     <body>
         <header class="sticky-top">
+
             <!--Barra de navegación-->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div>
@@ -39,7 +42,7 @@
                           </a>
                           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="viviendas.html">Viviendas</a>
-                            <a class="dropdown-item" href="jardines.html">Jardines</a>
+                            <a class="dropdown-item" href="jardines.html">Paisajes y jardines</a>
                           </div>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre mi</a></li>
@@ -58,32 +61,38 @@
                     Jardines
                 </h1>
             </div>
-            <section class="contain">
-                <div class="contain__effect wow animate__animated animate__fadeInUp animate__delay-1s">
-                    <img src="../images/imagenjardin1.jpg" alt="Imagen jardin 1" class="background__image img-fluid">
+            <section class="containJ gallery">
+                <div class="containJ__effect wow animate__animated animate__fadeInUp animate__delay-1s">
+                    <a href="../images/imagenjardin4.jpeg" data-caption="Jardines" class="background">
+                        <img src="../images/imagenjardin4.jpeg" alt="Imagen jardin 1" class="img-fluid background__image">
+                    </a>
+                    <h2>
+                        Jardines
+                    </h2>
+                    <p>
+                        Diseño y mantenimiento de parques y jardines
+                    </p>
+                </div>
+                <div class="containJ__effect wow animate__animated animate__fadeInUp animate__delay-2s">
+                    <a href="../images/imagenjardin1.jpg" data-caption="Jardines verticales" class="background">
+                        <img src="../images/imagenjardin1.jpg" alt="Imagen jardin 2" class="background__image img-fluid">
+                    </a>
                     <h2>
                         Jardines verticales
                     </h2>
                     <p>
-                    Lorem ipsum dolor sit amet.
+                        Ecosistemas para interiores y exteriores
                     </p>
                 </div>
-                <div class="contain__effect wow animate__animated animate__fadeInUp animate__delay-2s">
-                    <img src="../images/imagenjardin4.jpeg" alt="Imagen jardin 2" class="background__image img-fluid">
-                    <h2>
-                        Decoración
-                    </h2>
-                    <p>
-                    Lorem ipsum dolor sit amet.
-                    </p>
-                </div>
-                <div class="contain__effect wow animate__animated animate__fadeInUp animate__delay-3s">
-                    <img src="../images/imagenjardin3.jpeg" alt="Imagen jardin 3" class="background__image img-fluid">
+                <div class="containJ__effect wow animate__animated animate__fadeInUp animate__delay-3s">
+                    <a href="../images/imagenjardin3.jpeg" data-caption="Paisajes" class="background">
+                        <img src="../images/imagenjardin3.jpeg" alt="Imagen jardin 3" class="background__image img-fluid">
+                    </a>
                     <h2>
                         Paisajes
                     </h2>
                     <p>
-                    Lorem ipsum dolor sit amet.
+                        Planificación e integración de ambientes
                     </p>
                 </div>
             </section>
@@ -136,7 +145,13 @@
         <script src="../script/bootstrap.min.js"></script>
         <script src="../script/wow.min.js"></script>
         <script>
-        new WOW().init();
+            new WOW().init();
+        </script>
+        <script src="../script/baguetteBox.min.js" async></script>
+        <script>
+            window.addEventListener('load', function() {
+              baguetteBox.run('.gallery');
+            });
         </script>
     </body>
 </html>
