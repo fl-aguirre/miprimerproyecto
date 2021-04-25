@@ -2,30 +2,30 @@
     "id": 1,
     "nombre": "Producto 1",
     "precio": 100,
-    "imagen": "images/producto1.jpg"
+    "imagen": "../images/producto1.jpg"
   }, {
     "id": 2,
     "nombre": "Producto 2",
     "precio": 200,
-    "imagen": "images/producto2.jpg"
+    "imagen": "../images/producto2.jpg"
   }, {
     "id": 3,
     "nombre": "Producto 3",
     "precio": 300,
-    "imagen": "images/producto3.jpg"
+    "imagen": "../images/producto3.jpg"
   }, {
     "id": 4,
     "nombre": "Producto 4",
     "precio": 400,
-    "imagen": "images/producto4.jpg"
+    "imagen": "../images/producto4.jpg"
   }, {
     "id": 5,
     "nombre": "Producto 5",
     "precio": 500,
-    "imagen": "images/producto5.jpg"
+    "imagen": "../images/producto5.jpg"
 }, {
     "id": 6,
     "nombre": "Producto 6",
     "precio": 600,
-    "imagen": "images/producto6.jpg"
+    "imagen": "../images/producto6.jpg"
 }]

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta name="description" content="MARA Arquitectura">
+        <meta name="keywords" content="">
+        <meta name="title" content="Tienda">
+        <title>Tienda - MARA Arquitectura</title>
+        <link rel="shortcut icon" href="../images/logo1.png" />
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/lib/bootstrap.min.css"> 
+        <link rel="stylesheet" href="../css/lib/animate.min.css"/>
+        <link rel="stylesheet" href="../css/stylecss.css" type="text/css"/>
+    </head>
+    <body>
+
+        <header class="sticky-top">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+            <div>
+                <a href="">
+                    <img src="../images/logo.png" alt="Logo del encabezado grande" width="80" height="80">
+                </a>
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Home<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="tienda.html">Tienda</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Proyectos
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="viviendas.html">Viviendas</a>
+                        <a class="dropdown-item" href="jardines.html">Paisajes y jardines</a>
+                        </div>
+                </li>
+                <li class="nav-item"><a class="nav-link" href="sobremi.html">Sobre mi</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.facebook.com/Mara-Arquitectura-y-Disen%CC%83o-107625827638149"><i class="fab fa-facebook-square fa-lg"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="https://www.instagram.com/mara.arquitectura/"><i class="fab fa-instagram fa-lg"></i></a></li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+        <h1 class="tienda__h">Tienda</h1><hr>
+    
+        <main>
+        <section class="container">
+            <div id="sctProducts" class="row"></div>
+        </section>
+        
+        <section class="container">
+            <div id="sctCart" class="row"></div>
+        </section>
+
+        <section class="container">
+            <div id="sctPurchase" class="row"></div>
+        </section>
+        </main>
+
+        <footer class="container-fluid">
+        <div class="row">
+            <div class="mapa text-center col-6">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.0882175602596!2d-64.23523448485271!3d-31.384130981414938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298d71901ef2f%3A0xb9cd7b292af353fb!2sJos%C3%A9%20Maturana%201264%2C%20X5009%20HTJ%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1605988447907!5m2!1ses-419!2sar" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+            <div class="datosContacto col-lg-6 col-md-6 col-sm-6">
+                <p><a href="">Contacto</a></p>
+                <div>
+                    <p>José de Maturana 1264, Córdoba</p>
+                </div>
+                <div>
+                    <p>+54 383 4667798</p>
+                </div>
+                <div>
+                    <p>romano.life@gmail.com</p>
+                </div>
+                <div>
+                    <a href="https://www.facebook.com/Mara-Arquitectura-y-Disen%CC%83o-107625827638149"><i class="fab fa-facebook-square fa-2x"></i></a>
+                </div>
+                <div>
+                    <a href="https://www.instagram.com/mara.arquitectura/"><i class="fab fa-instagram fa-2x"></i></a>
+                </div>
+            </div>
+            <div class="autor col-lg-12 col-md-12 col-sm-12">
+                <p>Website by Franco Aguirre</p>
+            </div>
+        </div>
+    </footer>
+
+
+        <script src="../js/lib/jquery-3.6.0.min.js"></script>
+        <script src="../js/lib/bootstrap.bundle.min.js"></script>
+        <script src="https://kit.fontawesome.com/32a702b04e.js" crossorigin="anonymous"></script>
+        <script src="../js/lib/wow.min.js"></script>
+        <script>
+            new WOW().init();
+        </script>
+        <script src="../js/componentes.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>

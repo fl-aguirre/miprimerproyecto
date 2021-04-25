@@ -1,3 +1,49 @@
+/* NUEVOS ESTILOS - AGREGAR AL SCSS!! */
+.tienda__h {
+  font-size: 2.5rem;
+  margin: 20px;
+  text-align: center;
+}
+
+.alert {
+  position: fixed;
+  right: 0;
+  top: 90px;
+  z-index: 1000;
+  font-size: 1.3rem;
+}
+
+#sctProducts p, #sctCart p, #sctPurchase p {
+  font-size: 1.3rem;
+}
+
+.filter {
+  font-size: 1.3rem;
+  text-align: end;
+}
+
+.card__style {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center; }
+
+h3 {
+  font-size: 1.5rem;
+}
+
+.containPrice h3 {
+  text-align: right;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+.modal-body div {
+  margin-bottom: 10px;
+}
+
+  
+/* VIEJOS ESTILOS */
 .mainSection {
   background-image: url(../images/fondoHojas1.jpg);
   background-repeat: no-repeat;
