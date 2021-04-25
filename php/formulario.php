@@ -5,8 +5,7 @@
         echo json_encode($resultado);
         exit;
     }
-?>
-<?php
+
     if(isset($_POST['enviar'])){
         if(!empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['email']) && !empty($_POST['telefono']) && !empty($_POST['direccion']) && !empty($_POST['cp']) && !empty($_POST['localidad']) && !empty($_POST['provincia']) && !empty($_POST['tarjeta']) && !empty($_POST['codigo'])){
             $nombre = $_POST['nombre'];

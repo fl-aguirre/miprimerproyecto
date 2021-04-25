@@ -95,7 +95,7 @@ function modalForm () {
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <form action="php/formulario.php" method="POST" enctype="">
+                        <form action="../php/formulario.php" method="POST" enctype="">
                             <div class="modal-body form-group">
                                 <div class="form-row">
                                     <div class="col-6">

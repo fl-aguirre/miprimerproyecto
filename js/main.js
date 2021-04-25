@@ -204,7 +204,7 @@ function carrito(lista){
                 var datosCompra = localStorage.getItem("listaCompra");
                 $.ajax({
                     type: "POST",
-                    url: "formulario.php",
+                    url: "../php/formulario.php",
                     data: { data: datosCompra },
                     dataType: 'json',
                     success: function(data) {
