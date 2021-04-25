@@ -1,15 +1,43 @@
 //COMPONENTES DEL DOM
 //NUEVOS ELEMENTOS PARA SECCION PRODUCTOS
 function newElementProducts(producto){
-    return `<div id="productsCard${producto.id}" class="card col-4">
+            //CARD Y MODAL DE PRODUCTOS
+    return `<div id="productsCard${producto.id}" class="card col-lg-4 col-md-6 col-sm-6 col-12">
                 <img src="${producto.imagen}" class="card-img-top img-fluid">
                 <div class="card-body">
                     <h3 class="card-title">${producto.nombre}</h3>
                     <p class="card-text">Precio: $ ${producto.precio}</p>
                     <button id="btnAdd${producto.id}" type="button" class="btn btn-secondary">Seleccionar</button>
+                    <button id="btnDescription" type="button" class="btn btn-secondary" data-toggle="modal" data-target="#Modal${producto.id}">Descripción</button>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="Modal${producto.id}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title" id="modalLabel">${producto.nombre}</h3>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <img src="${producto.imagen}" width="300" class="mx-auto img-fluid mb-4">
+                                    <p class="text-justify mx-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae tempora placeat amet perferendis omnis repellat quasi excepturi veritatis quas corrupti deserunt consequuntur animi ut sed, impedit sequi sit voluptatum?</p>
+                                    <p class="text-justify mx-4"><strong>Precio: $ ${producto.precio}</strong></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                        </div>
+                    </div>
                 </div>
             </div>`;
 }
+
 //NUEVOS ELEMENTOS PARA SECCION CARRITO
 function newElementCart(producto){
     return `<div id="cartCard${producto.id}" class="card col-12 card__style">
@@ -52,23 +80,21 @@ function filtroPrecio(){
 
 //TITULOS
 function titleProducts() {
-    return `<h2 class="col-12">Productos</h2>`;
+    return `<div class="col-12" id="titleProductsContainer"><h2>Productos</h2></div>`;
 }
 
 function titleCart() {
-    return `<h2 class="col-12">Carrito</h2>`;
+    return `<div><h2>Carrito</h2></div>`;
 }
 
 function titlePurchase() {
-    return `<h2 class="col-12">Tus compras</h2>`;
+    return `<div><h2>Tus compras</h2></div>`;
 }
 
 //BOTONES
 //GUARDAR CARRITO
 function btnSave() {
-    return `<div class="col-12">
-                <button id="btnSave" type="button" class="btn btn-secondary">Ir al carrito</button>
-            </div>`;
+    return `<button id="btnSave" type="button" class="mt-3 btn btn-primary"><i class="fas fa-shopping-cart"></i></button>`;
 }
 //CONTENEDOR BOTONES COMPRAR Y VOLVER
 function btnCart() {
@@ -155,7 +181,7 @@ function modalForm () {
 }
 
 //CONTENEDOR DE PRECIO TOTAL
-function containPrice() {
+function priceContainer() {
     return `<div class="col-12 containPrice">
                 <h3>Precio total: $ <span id="totalPrice">${precioTotal}</span></h3>
                 <h3>Envío: $ <span id="shipping">${costoEnvio}</span></h3><hr>

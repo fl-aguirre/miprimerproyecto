@@ -52,10 +52,10 @@
                 </div>
             </nav>
         </header>
-        <main>
 
+        <main>
             <!--Contacto-->
-            <section class="mx-auto cuadroCont animate__animated animate__fadeInLeft">
+            <section class="mx-auto container__form animate__animated animate__fadeInLeft">
                 <form action="../php/correo.php" method="POST" enctype="">
                     <fieldset class="form-row">
                         <legend><h1>Contacto</h1></legend>
@@ -65,12 +65,12 @@
                         <div class="col-6 mb-2">
                             <input class="form-control form-control-lg" type="text" name="apellido" id="apellido" placeholder="Apellido">
                         </div>
-                        <div class="col-6 mb-2">
+                        <div class="col-12 mb-2">
                             <input class="form-control form-control-lg" type="email" name="email" id="email" placeholder="Email"><br>
                         </div>
                         <div class="col-12 mb-5">
                             <label class="col-12" for="red">¿Cómo nos descubriste?</label>
-                            <select class="col-6 custom-select custom-select-lg" name="red" id="red">
+                            <select class="col-12 custom-select custom-select-lg" name="red" id="red">
                                 <option value="facebook">Facebook</option>
                                 <option value="instagram">Instagram</option>
                                 <option value="web">Sitio web</option>
@@ -101,28 +101,19 @@
          <!--Footer-->
          <footer class="container-fluid">
             <div class="row">
-                <div class="mapa text-center col-lg-6 col-md-6 col-sm-6 wow animate__animated animate__fadeInUp">
+                <div class="mapa text-center col-6">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3406.0882175602596!2d-64.23523448485271!3d-31.384130981414938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x943298d71901ef2f%3A0xb9cd7b292af353fb!2sJos%C3%A9%20Maturana%201264%2C%20X5009%20HTJ%2C%20C%C3%B3rdoba!5e0!3m2!1ses-419!2sar!4v1605988447907!5m2!1ses-419!2sar" width="300" height="300" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
-                <!--Datos de contacto-->
-                <div class="datosContacto col-lg-6 col-md-6 col-sm-6 wow animate__animated animate__fadeInLeft animate__delay-2s">
-                    <p>
-                        <a href="pages/contacto.html">Contacto</a>
-                    </p>
+                <div class="datosContacto col-lg-6 col-md-6 col-sm-6">
+                    <p><a href="">Contacto</a></p>
                     <div>
-                        <p>
-                            José de Maturana 1264, Córdoba
-                        </p>
+                        <p>José de Maturana 1264, Córdoba</p>
                     </div>
                     <div>
-                        <p>
-                            +54 383 4667798
-                        </p>
+                        <p>+54 383 4667798</p>
                     </div>
                     <div>
-                        <p>
-                            romano.life@gmail.com
-                        </p>
+                        <p>romano.life@gmail.com</p>
                     </div>
                     <div>
                         <a href="https://www.facebook.com/Mara-Arquitectura-y-Disen%CC%83o-107625827638149"><i class="fab fa-facebook-square fa-2x"></i></a>
@@ -131,14 +122,12 @@
                         <a href="https://www.instagram.com/mara.arquitectura/"><i class="fab fa-instagram fa-2x"></i></a>
                     </div>
                 </div>
-                <!--Autor de la web-->
                 <div class="autor col-lg-12 col-md-12 col-sm-12">
-                    <p>
-                        Website by Franco Aguirre
-                    </p>
+                    <p>Website by Franco Aguirre</p>
                 </div>
             </div>
         </footer>
+
         <script src="../js/lib/jquery-3.6.0.min.js"></script>
         <script src="../js/lib/bootstrap.bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/32a702b04e.js" crossorigin="anonymous"></script>

@@ -87,7 +87,7 @@ function renderProducts (lista) {
 
     $('#sctProducts').prepend(filtroPrecio());
     $('#sctProducts').prepend(titleProducts());
-    $('#sctProducts').append(btnSave());
+    $('#titleProductsContainer').append(btnSave());
 }
 
 //RENDERIZAR CARRITO
@@ -127,7 +127,7 @@ function renderCart(lista) {
     $("#sctCart").append(btnCart());
     $('#btnCart').prepend(btnBuy());
     $('#btnCart').append(btnBack(1));
-    $("#sctCart").append(containPrice());
+    $("#sctCart").append(priceContainer());
 };
 
 
@@ -266,7 +266,7 @@ function compra(lista){
                 });
 
                 //MOSTRAR PRECIO TOTAL
-                $('#sctPurchase').append(containPrice());
+                $('#sctPurchase').append(priceContainer());
             
             //MOSTRAR ALERTA DE ERROR SI NO EJECUTA EL POST CORRECTAMENTE
             }else {
