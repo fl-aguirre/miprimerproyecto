@@ -7,14 +7,17 @@ let listaCompra = [];
 let precioTotal = 0;
 let costoEnvio = 200;
 let precioFinal;
+let nombreComprador;
+let datosComprador = [];
 
 //DECLARAR CLASE "PRODUCTO"
 class Producto {
-    constructor(nuevoId, nuevoNombre, nuevoPrecio, nuevaImagen){
+    constructor(nuevoId, nuevoNombre, nuevoPrecio, nuevaImagen, nuevadescripcion){
         this.id = nuevoId;
         this.nombre = nuevoNombre;
         this.precio = nuevoPrecio;
         this.imagen = nuevaImagen;
+        this.descripcion = nuevadescripcion;
         this.cantidad = 1;
     }
 
@@ -40,7 +43,7 @@ function pushear(listaEntrada,listaSalida){
             //VACIO. NO ME FUNCIONA DE OTRA MANERA.
         }
         else{
-            listaSalida.push(new Producto(producto.id, producto.nombre, producto.precio, producto.imagen));
+            listaSalida.push(new Producto(producto.id, producto.nombre, producto.precio, producto.imagen, producto.descripcion));
         }
     }
 }
@@ -156,7 +159,10 @@ function productos(lista){
             listaCarritoParse = JSON.parse(localStorage.getItem(`listaCarrito`));
             if (Array.isArray(listaCarritoParse)){
                 pushear(listaCarritoParse,listaCarrito);
+                
+                //RENDERIZAR CARRITO
                 carrito(listaCarrito);
+
             }else{
                 let mensaje = "Tu carrito está vacío!"
                 $("body").prepend(alertaMsj(mensaje));
@@ -193,14 +199,29 @@ function carrito(lista){
             });
         });
 
-
         //BOTON PARA COMPRAR
         $('#btnBuy').click(() => {
             $("body").prepend(modalForm());
-            $('#btnBuyForm').click(() => {
+            $('#btnBuyForm').click((e) => {
+                e.preventDefault();
+
+                //GUARDAR DATOS DE LA LISTA
                 calcularTotal(lista);
                 listaCompra = lista;
                 saveLocal("listaCompra", JSON.stringify(listaCompra));
+                
+                //GUARDAR DATOS DEL COMPRADOR
+                $('#formularioCompra :input').each(function(){
+                    var name = $(this).attr('id');
+                    var valor = $(this).val();
+                    datosComprador.push({
+                        key: name,
+                        value: valor
+                    });
+                });
+                saveLocal("datosComprador", JSON.stringify(datosComprador));
+
+                //RENDERIZAR COMPRA
                 compra(listaCompra);
             });
         });
@@ -227,7 +248,8 @@ function compra(lista){
                 //CREAR TITULO DE SECCION
                 $('#sctPurchase').append(titlePurchase());
 
-                $('#titlePurchaseContainer').prepend(purchaseConfirm());
+                //AGREGAR MENSAJE DE AGRADECIMIENTO
+                $('#titlePurchaseContainer').prepend(purchaseConfirm(datosComprador[0].value));
 
                 //MOSTRAR PRODUCTOS COMPRADOS EN HTML
                 lista.forEach(producto => {
@@ -247,6 +269,7 @@ function compra(lista){
                         listaCompra = [];
                         localStorage.clear();
 
+                        //RENDERIZAR PRODUCTOS
                         productos(listaProductos);
                     });
                 });

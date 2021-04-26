@@ -79,9 +79,9 @@ function filtroPrecio(){
 }
 
 //AGRADECIMIENTO POR LA COMPRA Y DATOS
-function purchaseConfirm () {
+function purchaseConfirm (nombreComprador) {
     return `<div id="purchaseConfirm">
-                <h2>¡Muchas gracias por su compra!</h2>
+                <h2>¡Muchas gracias por su compra, ${nombreComprador}!</h2>
                 <p>Sus datos han sido correctamente procesados. En instantes, recibirá un correo con los datos de la compra.
             </div>`;
 }
@@ -129,7 +129,7 @@ function modalForm () {
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <form name="formularioCompra" action="../php/formulario.php" method="POST" enctype="">
+                        <form id="formularioCompra" name="formularioCompra" action="../php/formulario.php" method="POST" enctype="">
                             <div class="modal-body form-group">
                                 <div class="form-row">
                                     <div class="col-6">

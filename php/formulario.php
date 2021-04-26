@@ -5,14 +5,14 @@
             $apellido = $_POST['apellido'];
             $email = $_POST['email'];
             $direccion = $_POST['direccion'];
-            $cp = $_POST['cp']
-            $localidad = $_POST['localidad']
-            $provincia = $_POST['provincia']
-            $tarjeta = $_POST['tarjeta']
-            $codigo = $_POST['codigo']
+            $cp = $_POST['cp'];
+            $localidad = $_POST['localidad'];
+            $provincia = $_POST['provincia'];
+            $tarjeta = $_POST['tarjeta'];
+            $codigo = $_POST['codigo'];
             $asunto="Nueva compra";
 
-            $msg="Nombre: ".$nombre."\n"."Apellido: ".$apellido."\n"."Email: ".$email."\n"."Dirección: ".$direccion."\n"."CP: ".$cp."\n"."Localidad: ".$localidad."\n"."Provincia: ".$provincia."\n"."N° de tarjeta: ".$tarjeta."\n"."Código de tarjeta: ".$codigo."\n".$_POST['data'];
+            $msg="Nombre: ".$nombre."\n"."Apellido: ".$apellido."\n"."Email: ".$email."\n"."Dirección: ".$direccion."\n"."CP: ".$cp."\n"."Localidad: ".$localidad."\n"."Provincia: ".$provincia."\n"."N° de tarjeta: ".$tarjeta."\n"."Código de tarjeta: ".$codigo."\n".;
             $header="From: ".$email."\r\n";//la persona que escribió me dejo su email, entonces el remitente es ese email
             $header.="Reply-To: noreply@example.com"."\r\n";//Le mando un no responder o noreply
             $header.="X-Mailer: PHP/".phpversion();
@@ -20,12 +20,12 @@
             $mail=@mail($tuCasilla,$asunto,$msg,$header);//en "tu mail" tenes que colocar tu casilla de email de consultas,es decir, la casilla en la cual vas a recibir las consultas que deja la gente en tu página
             if($mail){// si el email se mando respondo éxito con javascript
                 echo "<script>
-                        alert('Gracias por su contacto! En breve nos estaremos comunicando');
+                        alert('Gracias por su compra!');
                         window.location='../tienda.html'
                         </script>";
             }else{//si no se pudo enviar el email lo notifico
                 echo "<script>
-                        alert('Lamentamos decirle que no hemos podido enviar su consulta');
+                        alert('Lamentamos decirle que no hemos podido procesar su compra');
                         window.location='../tienda.html'
                         </script>";
             }
