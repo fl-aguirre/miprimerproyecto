@@ -1,11 +1,4 @@
 <?php
-    $resultado = array('mensaje' => '');
-    if( isset($_POST['data']) ) {
-        $resultado['mensaje'] = "Viene el valor : ".$_POST['data'];
-        echo json_encode($resultado);
-        exit;
-    }
-
     if(isset($_POST['enviar'])){
         if(!empty($_POST['nombre']) && !empty($_POST['apellido']) && !empty($_POST['email']) && !empty($_POST['telefono']) && !empty($_POST['direccion']) && !empty($_POST['cp']) && !empty($_POST['localidad']) && !empty($_POST['provincia']) && !empty($_POST['tarjeta']) && !empty($_POST['codigo'])){
             $nombre = $_POST['nombre'];
@@ -24,7 +17,7 @@
             $header.="Reply-To: noreply@example.com"."\r\n";//Le mando un no responder o noreply
             $header.="X-Mailer: PHP/".phpversion();
             $tuCasilla="frl.aguirre@gmail.com";
-            $mail=mail($tuCasilla,$asunto,$msg,$header);//en "tu mail" tenes que colocar tu casilla de email de consultas,es decir, la casilla en la cual vas a recibir las consultas que deja la gente en tu página
+            $mail=@mail($tuCasilla,$asunto,$msg,$header);//en "tu mail" tenes que colocar tu casilla de email de consultas,es decir, la casilla en la cual vas a recibir las consultas que deja la gente en tu página
             if($mail){// si el email se mando respondo éxito con javascript
                 echo "<script>
                         alert('Gracias por su contacto! En breve nos estaremos comunicando');

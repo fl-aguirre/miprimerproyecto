@@ -201,21 +201,6 @@ function carrito(lista){
                 calcularTotal(lista);
                 listaCompra = lista;
                 saveLocal("listaCompra", JSON.stringify(listaCompra));
-                var datosCompra = localStorage.getItem("listaCompra");
-                $.ajax({
-                    type: "POST",
-                    url: "../php/formulario.php",
-                    data: { data: datosCompra },
-                    dataType: 'json',
-                    success: function(data) {
-                        //$('#output').html(data);
-                        console.log(data.mensaje);
-                    },
-                    error: function(error) {
-                        alert(error);
-                        console.log(error);
-                    }
-                });
                 compra(listaCompra);
             });
         });
@@ -239,17 +224,18 @@ function compra(lista){
                 $('#sctCart').empty().parent().hide();
                 $('#sctPurchase').empty().parent().show();
 
-                let mensaje = "Gracias por tu compra!!"
-                $("body").prepend(alertaMsj(mensaje));
-                quitarAlerta();
-
                 //CREAR TITULO DE SECCION
                 $('#sctPurchase').append(titlePurchase());
+
+                $('#titlePurchaseContainer').prepend(purchaseConfirm());
 
                 //MOSTRAR PRODUCTOS COMPRADOS EN HTML
                 lista.forEach(producto => {
                     $('#sctPurchase').append(newElementPurchase(producto));
                 });
+
+                //MOSTRAR PRECIO TOTAL
+                $('#sctPurchase').append(priceContainer());
 
                 //CREAR Y EJECUTAR BOTON PARA VOLVER
                 $('#sctPurchase').append(btnBack(2));
@@ -264,9 +250,6 @@ function compra(lista){
                         productos(listaProductos);
                     });
                 });
-
-                //MOSTRAR PRECIO TOTAL
-                $('#sctPurchase').append(priceContainer());
             
             //MOSTRAR ALERTA DE ERROR SI NO EJECUTA EL POST CORRECTAMENTE
             }else {

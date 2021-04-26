@@ -2,7 +2,7 @@
 //NUEVOS ELEMENTOS PARA SECCION PRODUCTOS
 function newElementProducts(producto){
             //CARD Y MODAL DE PRODUCTOS
-    return `<div id="productsCard${producto.id}" class="card col-lg-4 col-md-6 col-sm-6 col-12">
+    return `<div id="productsCard${producto.id}" class="card col-lg-4 col-md-6 col-sm-6 col-12 card__style__products">
                 <img src="${producto.imagen}" class="card-img-top img-fluid">
                 <div class="card-body">
                     <h3 class="card-title">${producto.nombre}</h3>
@@ -25,7 +25,7 @@ function newElementProducts(producto){
                             <div class="container-fluid">
                                 <div class="row">
                                     <img src="${producto.imagen}" width="300" class="mx-auto img-fluid mb-4">
-                                    <p class="text-justify mx-4">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae tempora placeat amet perferendis omnis repellat quasi excepturi veritatis quas corrupti deserunt consequuntur animi ut sed, impedit sequi sit voluptatum?</p>
+                                    <p class="text-justify mx-4">${producto.descripcion}</p>
                                     <p class="text-justify mx-4"><strong>Precio: $ ${producto.precio}</strong></p>
                                 </div>
                             </div>
@@ -40,7 +40,7 @@ function newElementProducts(producto){
 
 //NUEVOS ELEMENTOS PARA SECCION CARRITO
 function newElementCart(producto){
-    return `<div id="cartCard${producto.id}" class="card col-12 card__style">
+    return `<div id="cartCard${producto.id}" class="card col-12 card__style__cart">
                 <div>
                     <img src="${producto.imagen}" width="150" height="150">
                     <h3>${producto.nombre}</h3>
@@ -57,7 +57,7 @@ function newElementCart(producto){
 
 //NUEVOS ELEMENTOS PARA SECCION COMPRA
 function newElementPurchase(producto){
-    return `<div id="purchaseCard${producto.id}" class="card col-12 card__style">
+    return `<div id="purchaseCard${producto.id}" class="card col-12 card__style__purchase">
                 <div>
                     <img src="${producto.imagen}" width="150" height="150">
                     <h3>${producto.nombre}</h3>
@@ -78,23 +78,31 @@ function filtroPrecio(){
             </div>`;
 }
 
+//AGRADECIMIENTO POR LA COMPRA Y DATOS
+function purchaseConfirm () {
+    return `<div id="purchaseConfirm">
+                <h2>¡Muchas gracias por su compra!</h2>
+                <p>Sus datos han sido correctamente procesados. En instantes, recibirá un correo con los datos de la compra.
+            </div>`;
+}
+
 //TITULOS
 function titleProducts() {
     return `<div class="col-12" id="titleProductsContainer"><h2>Productos</h2></div>`;
 }
 
 function titleCart() {
-    return `<div><h2>Carrito</h2></div>`;
+    return `<div id="titlePurchaseCart"><h2>Carrito</h2></div>`;
 }
 
 function titlePurchase() {
-    return `<div><h2>Tus compras</h2></div>`;
+    return `<div class="col-12" id="titlePurchaseContainer"><h2>Tus compras</h2></div>`;
 }
 
 //BOTONES
 //GUARDAR CARRITO
 function btnSave() {
-    return `<button id="btnSave" type="button" class="mt-3 btn btn-primary"><i class="fas fa-shopping-cart"></i></button>`;
+    return `<button id="btnSave" type="button" class="mt-3 btn"><i class="fas fa-shopping-cart"></i></button>`;
 }
 //CONTENEDOR BOTONES COMPRAR Y VOLVER
 function btnCart() {
@@ -121,7 +129,7 @@ function modalForm () {
                             <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
-                        <form action="../php/formulario.php" method="POST" enctype="">
+                        <form name="formularioCompra" action="../php/formulario.php" method="POST" enctype="">
                             <div class="modal-body form-group">
                                 <div class="form-row">
                                     <div class="col-6">
@@ -191,7 +199,7 @@ function priceContainer() {
 
 //ALERTAS
 function alertaCarrito(producto) {
-    return `<div class="alert alert-primary alert-dismissible fade show" role="alert" data-dismiss="alert">
+    return `<div class="alert alert-dismissible fade show" role="alert" data-dismiss="alert">
                 ${producto.nombre} ha sido agregado al carrito!
             </div>`;
 }

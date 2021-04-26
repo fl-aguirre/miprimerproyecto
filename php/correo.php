@@ -7,7 +7,7 @@
             $red=$_POST['red'];
             if($_POST['news']=='si'){
                 $news=$_POST['news'];
-            }else{
+            }else{ 
                 $news='no';
             }
             $asunto=$_POST['asunto'];//puedo poner un input asunto o crearlo yo directamente  
@@ -16,7 +16,7 @@
             $header.="Reply-To: noreply@example.com"."\r\n";//Le mando un no responder o noreply
             $header.="X-Mailer: PHP/".phpversion();
             $tuCasilla="frl.aguirre@gmail.com";
-            $mail=mail($tuCasilla,$asunto,$msg,$header);//en "tu mail" tenes que colocar tu casilla de email de consultas,es decir, la casilla en la cual vas a recibir las consultas que deja la gente en tu página
+            $mail= @mail($tuCasilla,$asunto,$msg,$header);//en "tu mail" tenes que colocar tu casilla de email de consultas,es decir, la casilla en la cual vas a recibir las consultas que deja la gente en tu página
             if($mail){// si el email se mando respondo éxito con javascript
                 echo "<script>
                         alert('Gracias por su contacto! En breve nos estaremos comunicando');

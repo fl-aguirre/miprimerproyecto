@@ -244,43 +244,68 @@
   right: 0;
   top: 90px;
   z-index: 1000;
-  font-size: 1.3rem; }
+  font-size: 1.3rem;
+  background-color: #d8395e;
+  color: #ffffff; }
 
 #sctProducts p, #sctCart p, #sctPurchase p {
   font-size: 1.3rem; }
 
 #sctProducts button, #sctCart button, #sctPurchase button {
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  margin: 2px; }
+
+#sctProducts img, #sctCart img, #sctPurchase img {
+  border-radius: 1rem;
+  margin-bottom: 10px; }
 
 #btnSave {
   position: fixed;
   top: 160px;
   right: 10px;
-  z-index: 1001; }
+  z-index: 1001;
+  background-color: #d8395e; }
   #btnSave i {
-    font-size: 20px; }
-
-@media (min-width: 992px) {
-  #btnSave i {
-    font-size: 2vw; } }
+    font-size: 2rem;
+    color: #ffffff; }
 
 .filter {
   font-size: 1.3rem;
   text-align: start; }
 
-.card__style {
+.card__style__products {
+  padding: 20px; }
+
+.card__style__cart {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center; }
+  align-items: center;
+  text-align: center;
+  padding: 20px; }
+
+.card__style__purchase {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 20px; }
 
 .containPrice h3 {
   text-align: right;
   font-size: 1.3rem;
-  font-weight: bold; }
+  font-weight: bold;
+  margin: 10px; }
 
 .modal-body div {
   margin-bottom: 10px; }
+
+#purchaseConfirm {
+  margin: 50px;
+  text-align: center; }
+  #purchaseConfirm p {
+    font-size: 1.5rem; }
 
 * {
   margin: 0;
