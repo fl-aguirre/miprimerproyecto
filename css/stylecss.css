@@ -1,6 +1,9 @@
 .mainSection {
   background-image: url(../images/fondoHojas1.jpg);
   background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
   height: 500px; }
 
 .mainSection__h {

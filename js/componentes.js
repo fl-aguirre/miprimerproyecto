@@ -205,9 +205,9 @@ function priceContainer() {
 }
 
 //ALERTAS
-function alertaCarrito(producto) {
+function alertaCarrito() {
     return `<div class="alert alert-dismissible fade show" role="alert" data-dismiss="alert">
-                ${producto.nombre} ha sido agregado al carrito!
+                El producto ha sido agregado al carrito!
             </div>`;
 }
 

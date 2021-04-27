@@ -78,7 +78,7 @@ function renderProducts (lista) {
                 }
                 else{
                     listaCarrito.push(producto);
-                    $("body").prepend(alertaCarrito(producto));
+                    $("body").prepend(alertaCarrito());
                     quitarAlerta();
                 }
                 $(`#productsCard${producto.id}`).fadeOut()
