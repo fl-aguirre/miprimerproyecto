@@ -9,6 +9,7 @@
         <title>Viviendas</title>
         <link rel="shortcut icon" href="../images/logo1.png" />
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="../css/lib/baguetteBox.min.css" type="text/css"/>
         <link rel="stylesheet" href="../css/lib/bootstrap.min.css"> 
         <link rel="stylesheet" href="../css/lib/animate.min.css"/>
         <link rel="stylesheet" href="../css/stylecss.css" type="text/css"/>
@@ -129,6 +130,12 @@
         <script src="../script/wow.min.js"></script>
         <script>
             new WOW().init();
+        </script>
+        <script src="../js/lib/baguetteBox.min.js" async></script>
+        <script>
+            window.addEventListener('load', function() {
+                baguetteBox.run('.gallery');
+            });
         </script>
         <script src="../js/componentes.js"></script>
         <script src="../js/main.js"></script>

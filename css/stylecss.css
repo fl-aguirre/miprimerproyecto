@@ -135,7 +135,8 @@
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   overflow: hidden;
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 10px; }
   .containV .containV__img {
     width: 100%;
     height: 300px;
@@ -158,7 +159,8 @@
 .containJ {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center; }
+  justify-content: center;
+  margin-bottom: 0; }
 
 @media (min-width: 1200px) {
   .containJ {
@@ -185,7 +187,7 @@
     text-transform: uppercase;
     transition: color 0.5s; }
   .containJ__effect p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color: transparent;
     transition: color 0.5s; }
   .containJ__effect:hover {
@@ -247,12 +249,12 @@
   right: 0;
   top: 90px;
   z-index: 1000;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   background-color: #d8395e;
   color: #ffffff; }
 
 #sctProducts p, #sctCart p, #sctPurchase p {
-  font-size: 1.3rem; }
+  font-size: 1.4rem; }
 
 #sctProducts button, #sctCart button, #sctPurchase button {
   font-size: 1.1rem;
@@ -370,10 +372,10 @@ body {
   font-family: 'Montserrat', serif; }
 
 nav {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   opacity: 0.95; }
   nav .dropdown-menu {
-    font-size: 1.5rem; }
+    font-size: 1.6rem; }
 
 .dropdown .dropdown-menu {
   background-color: #343a40;
@@ -398,7 +400,7 @@ a {
 article h2 {
   margin: 10px 0px 10px 0px;
   padding: 15px;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   color: #272727; }
 
 article img {
@@ -410,21 +412,24 @@ article img {
 article p {
   margin-top: 10px;
   padding: 15px;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   line-height: 20px;
   color: #272727; }
 
 h3 {
-  font-size: 1.5rem; }
+  font-size: 1.6rem; }
 
 footer {
   background-image: url(../images/footer1.png);
-  background-repeat: repeat;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
   font-weight: bold;
   height: 350px; }
   footer p a {
     color: #272727;
-    font-size: 1.8rem; }
+    font-size: 1.9rem; }
   footer i, footer p {
     color: #272727; }
   footer iframe {
@@ -443,7 +448,7 @@ footer {
     display: none; } }
 
 .datosContacto {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   padding: 5rem; }
 
 .autor {
