@@ -14,10 +14,17 @@
         <link rel="stylesheet" href="../css/stylecss.css" type="text/css"/>
     </head>
     <body>
+
+        <!-- Spinner -->
+        <div id="contenedor__carga">
+            <div id="carga"></div>
+        </div>
+
+        <!-- Efecto fade in -->
+        <div id="fade__effect">
+
+        <!--Barra de navegación-->
         <header class="sticky-top">
-
-            <!--Barra de navegación-->
-
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div>
                     <a href="../index.html">
@@ -52,39 +59,37 @@
                 </div>
             </nav>
         </header>
+
         <main class="container-fluid">
-
             <!--Viviendas-->
-
-            <div class="fondoV wow animate__animated animate__fadeInLeft">
+            <div class="fondoV">
                 <h1>
                     Viviendas
                 </h1>
             </div>
             <section class="gallery containV">
                 <a href="../images/imagenobra1.jpg" data-caption="Image caption">
-                    <img src="../images/imagenobra1.jpg" alt="Imagen obra 1" width="550" class="containV__img img-fluid wow animate__animated animate__fadeInLeft">
+                    <img src="../images/imagenobra1.jpg" alt="Imagen obra 1" width="550" class="containV__img img-fluid wow animate__animated animate__fadeInLeft animate__delay-1s">
                 </a>
                 <a href="../images/imagenobra2.jpg" data-caption="Image caption">
-                    <img src="../images/imagenobra2.jpg" alt="Imagen obra 2" width="550" class="containV__img img-fluid wow animate__animated animate__fadeInRight">
+                    <img src="../images/imagenobra2.jpg" alt="Imagen obra 2" width="550" class="containV__img img-fluid wow animate__animated animate__fadeInRight animate__delay-1s">
                 </a>
                 <a href="../images/imagenobra3.jpg" data-caption="Image caption">
-                    <img src="../images/imagenobra3.jpg" alt="Imagen obra 3" width="550" class="containV__img img-fluid wow animate__animated animate__fadeInLeft">
+                    <img src="../images/imagenobra3.jpg" alt="Imagen obra 3" width="550" class="containV__img img-fluid wow animate__animated animate__fadeInLeft animate__delay-1s">
                 </a>
                 <a href="../images/imagenobra4.png" data-caption="Image caption">
-                    <img src="../images/imagenobra4.png" alt="Imagen obra 4" width="550" class="containV__img img-fluid wow animate__animated animate__fadeInRight">
+                    <img src="../images/imagenobra4.png" alt="Imagen obra 4" width="550" class="containV__img img-fluid wow animate__animated animate__fadeInRight animate__delay-1s">
                 </a>
                 <a href="../images/imagenobra5.jpg" data-caption="Image caption">
-                    <img src="../images/imagenobra5.jpg" alt="Imagen obra 5" width="550" class="containV__img img-fluid wow animate__animated animate__fadeInLeft">
+                    <img src="../images/imagenobra5.jpg" alt="Imagen obra 5" width="550" class="containV__img img-fluid wow animate__animated animate__fadeInLeft animate__delay-1s">
                 </a>
                 <a href="../images/imagenobra6.jpg" data-caption="Image caption">
-                    <img src="../images/imagenobra6.jpg" alt="Imagen obra 6" width="550" class="containV__img img-fluid wow animate__animated animate__fadeInRight">
+                    <img src="../images/imagenobra6.jpg" alt="Imagen obra 6" width="550" class="containV__img img-fluid wow animate__animated animate__fadeInRight animate__delay-1s">
                 </a>
             </section>
         </main>
 
          <!--Footer-->
-         
          <footer class="container-fluid">
             <div class="row">
                 <div class="mapa text-center col-6">
@@ -113,6 +118,9 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Cierre de efecto fade in -->
+        </div>
         
         <script src="../js/lib/jquery-3.6.0.min.js"></script>
         <script src="../js/lib/bootstrap.bundle.min.js"></script>
@@ -122,5 +130,7 @@
         <script>
             new WOW().init();
         </script>
+        <script src="../js/componentes.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 </html>

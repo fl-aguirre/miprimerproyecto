@@ -232,11 +232,22 @@
     padding: 20px;  
 }
   
-.containPrice h3 {
+.priceContainer {
+    margin-top: 10px;
     text-align: right;
-    font-size: 1.3rem;
+    h3 {
+    text-align: right;
+    font-size: 1.4rem;
     font-weight: bold;
     margin: 10px;
+    }
+    .priceContainer__total{
+        border-bottom: 1px solid black;
+    }
+    .priceContainer__final{
+        border-bottom: 1px solid black;
+        margin-bottom: 10px;
+    }
 }
   
 .modal-body div {
@@ -249,4 +260,39 @@
     p {
         font-size: 1.5rem;
     }
+}
+
+// Spinner
+#contenedor__carga{
+    background-color: $gris-fondo;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    -webkit-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+    z-index: 10000;
+}
+
+#carga {
+    border: 10px solid #ccc;
+    border-top-color: #f4266a ;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    -webkit-animation: girar 1.5s linear infinite;
+    -o-animation: girar 1.5s linear infinite;
+    animation: girar 1.5s linear infinite;
+}
+
+@keyframes girar {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
 }

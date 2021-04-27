@@ -292,11 +292,19 @@
   text-align: center;
   padding: 20px; }
 
-.containPrice h3 {
-  text-align: right;
-  font-size: 1.3rem;
-  font-weight: bold;
-  margin: 10px; }
+.priceContainer {
+  margin-top: 10px;
+  text-align: right; }
+  .priceContainer h3 {
+    text-align: right;
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 10px; }
+  .priceContainer .priceContainer__total {
+    border-bottom: 1px solid black; }
+  .priceContainer .priceContainer__final {
+    border-bottom: 1px solid black;
+    margin-bottom: 10px; }
 
 .modal-body div {
   margin-bottom: 10px; }
@@ -306,6 +314,38 @@
   text-align: center; }
   #purchaseConfirm p {
     font-size: 1.5rem; }
+
+#contenedor__carga {
+  background-color: #f8f7f6;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+  z-index: 10000; }
+
+#carga {
+  border: 10px solid #ccc;
+  border-top-color: #f4266a;
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-animation: girar 1.5s linear infinite;
+  -o-animation: girar 1.5s linear infinite;
+  animation: girar 1.5s linear infinite; }
+
+@keyframes girar {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 * {
   margin: 0;
@@ -324,10 +364,7 @@ html {
 body {
   color: #272727;
   background: linear-gradient(141deg, #f8f9fa 25%, #eee 40%, #ddd 55%);
-  font-family: 'Montserrat', serif;
-  animation-name: fade;
-  animation-iteration-count: 1;
-  animation-duration: 2s; }
+  font-family: 'Montserrat', serif; }
 
 nav {
   font-size: 1.5rem;

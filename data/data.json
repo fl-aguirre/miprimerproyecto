@@ -1,37 +1,37 @@
 [{
     "id": 1,
-    "nombre": "Producto 1",
-    "precio": 100,
+    "nombre": "Maceta Misionera",
+    "precio": 2290,
     "imagen": "../images/producto1.jpg",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae tempora placeat amet perferendis omnis repellat quasi excepturi veritatis quas corrupti deserunt consequuntur animi ut sed, impedit sequi sit voluptatum?"
+    "descripcion": "Color: Blanco\nMaterial: Fibrocemento\nMedidas: 50 cm x 40 cm x 50 cm\nPara interior."
   }, {
     "id": 2,
-    "nombre": "Producto 2",
-    "precio": 200,
+    "nombre": "Triciclo porta macetas",
+    "precio": 3000,
     "imagen": "../images/producto2.jpg",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae tempora placeat amet perferendis omnis repellat quasi excepturi veritatis quas corrupti deserunt consequuntur animi ut sed, impedit sequi sit voluptatum?"
+    "descripcion": "Color: Blanco\nMaterial: Hierro\nMedidas: 54 x 31 x 40 cm\nPara dos macetas"
   }, {
     "id": 3,
-    "nombre": "Producto 3",
-    "precio": 300,
+    "nombre": "Porta maceta de metal",
+    "precio": 1500,
     "imagen": "../images/producto3.jpg",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae tempora placeat amet perferendis omnis repellat quasi excepturi veritatis quas corrupti deserunt consequuntur animi ut sed, impedit sequi sit voluptatum?"
+    "descripcion": "Color: Negro\nMaterial: Hierro\nMedidas: 54 x 31 x 40 cm\nIncluye canasto de mimbre"
   }, {
     "id": 4,
-    "nombre": "Producto 4",
-    "precio": 400,
+    "nombre": "Mini tutores para jardín",
+    "precio": 1899,
     "imagen": "../images/producto4.jpg",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae tempora placeat amet perferendis omnis repellat quasi excepturi veritatis quas corrupti deserunt consequuntur animi ut sed, impedit sequi sit voluptatum?"
+    "descripcion": "Color: Óxido\nMaterial: Hierro\nMedidas: 50 x 10 cm\nPaquete de 4 (colibrí, corazón, mariposa y libélula)"
   }, {
     "id": 5,
-    "nombre": "Producto 5",
-    "precio": 500,
+    "nombre": "Faro solar decorativo",
+    "precio": 2239,
     "imagen": "../images/producto5.jpg",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae tempora placeat amet perferendis omnis repellat quasi excepturi veritatis quas corrupti deserunt consequuntur animi ut sed, impedit sequi sit voluptatum?"
+    "descripcion": "Color: Óxido\nMaterial: Hierro\nMedidas: 11 x 19 x 89 cm\nFotosensible"
 }, {
     "id": 6,
-    "nombre": "Producto 6",
-    "precio": 600,
+    "nombre": "Maceta cilíndrica",
+    "precio": 1900,
     "imagen": "../images/producto6.jpg",
-    "descripcion": "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Facere repudiandae tempora placeat amet perferendis omnis repellat quasi excepturi veritatis quas corrupti deserunt consequuntur animi ut sed, impedit sequi sit voluptatum?"
+    "descripcion": "Color: Cemento\nMaterial: Fibrocemento\nMedidas: 50 cm x 40 cm x 50 cm\nPara exterior"
 }]

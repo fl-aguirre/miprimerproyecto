@@ -15,8 +15,15 @@
     </head>
     <body>
 
-    <!--Header - Barra de navegación-->
+        <!-- Spinner -->
+        <div id="contenedor__carga">
+            <div id="carga"></div>
+        </div>
 
+        <!-- Efecto fade in -->
+        <div id="fade__effect">
+
+        <!--Header - Barra de navegación-->
         <header class="sticky-top">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
                 <div>
@@ -52,10 +59,9 @@
                 </div>
             </nav>
         </header>
+
         <main>
-
             <!-- Presentación de la web -->
-
             <section class="container-fluid">
                 <h1 class="row mainSection">
                     <p class="mainSection__h col-lg-6 col-md-6 col-sm-6 animate__animated animate__fadeInLeft animate__delay-1s">
@@ -68,10 +74,9 @@
             </section>
 
             <!--Estudio-->
-
             <section class="container-fluid">
                 <article class="row">
-                    <div class="col-lg-6 col-md-12 col-sm-12 wow animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="col-lg-6 col-md-12 col-sm-12 wow animate__animated animate__fadeInUp animate__delay-1s">
                         <h2>
                             Estudio
                         </h2>
@@ -82,17 +87,16 @@
                             Nuestro trabajo comienza al generar las entrevistas con nuestros clientes para captar formas de vida, necesidades y gustos de los usuarios, teniendo en cuenta factores como la geolocalización para lograr, a través de ello, proyectos integradores donde lo edificado se conjuga con su entorno.
                         </p>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 text-center wow animate__animated animate__fadeInUp animate__delay-1s">
-                        <img src="images/imagen1.jpg" alt="Imagen 1" class="img-fluid">
+                    <div class="col-lg-6 col-md-12 col-sm-12 text-center">
+                        <img src="images/imagen1.jpg" alt="Imagen 1" class="img-fluid wow animate__animated animate__fadeInUp " width="500px">
                     </div>     
                 </article>
             </section>
 
             <!--Viviendas y edificaciones-->
-
             <section class="container-fluid">
                 <article class="row">
-                    <div id="carouselControls" class="carousel slide col-lg-6 col-md-12 col-sm-12 text-center wow animate__animated animate__fadeInUp animate__delay-1s" data-ride="carousel">
+                    <div id="carouselControls" class="carousel slide col-lg-6 col-md-12 col-sm-12 text-center" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                             <img src="images/imagenobra1.jpg" class="noStyle rounded mx-auto img-fluid d-block w-100" alt="Imagen obra 1">
@@ -113,7 +117,7 @@
                             <span class="sr-only">Next</span>
                         </a>
                     </div>
-                    <div class="col-lg-6 col-md-12 col-sm-12 wow animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="col-lg-6 col-md-12 col-sm-12 wow animate__animated animate__fadeInUp">
                         <h2>
                             Viviendas y edificaciones
                         </h2>
@@ -128,10 +132,9 @@
             </section>
 
             <!--Paisajes y jardines-->
-
             <section class="container-fluid">
                 <article class="row">                    
-                    <div id="carouselSlides" data-interval="5000" class="carousel slide col-lg-5 col-md-12 col-sm-12 wow animate__animated animate__fadeInUp animate__delay-1s" data-ride="carousel">
+                    <div id="carouselSlides" data-interval="5000" class="carousel slide col-lg-5 col-md-12 col-sm-12" data-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
                                 <img class="noStyle rounded mx-auto d-block img-fluid" src="images/imagenjardin1.jpg" alt="Imagen jardín 1" width="300">
@@ -144,7 +147,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-7 col-md-12 col-sm-12 wow animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="col-lg-7 col-md-12 col-sm-12 wow animate__animated animate__fadeInUp">
                         <h2 class="wow animate__animated animate__fadeInLeft">
                            Paisajes y jardines
                         </h2>
@@ -159,11 +162,10 @@
             </section>
 
              <!--Servicios-->
-
              <div class="divId" id="servicios"></div>
              <section class="container-fluid">
                 <div class="row service">
-                    <div class="serviceSection1 mx-auto col-lg-4 col-md-4 col-sm-4 col-12 wow animate__animated animate__fadeInUp animate__delay-1s">
+                    <div class="serviceSection1 mx-auto col-lg-4 col-md-4 col-sm-4 col-12 wow animate__animated animate__fadeInUp">
                         <div>
                             <i class="fas fa-drafting-compass fa-4x"></i>
                         </div>
@@ -174,7 +176,7 @@
                             Diseños y planificaciones innovadoras de viviendas, jardines y paisajes. 
                         </p>
                     </div>
-                    <div class="serviceSection2 col-lg-4 col-md-4 col-sm-4 col-12 wow animate__animated animate__fadeInUp animate__delay-2s">
+                    <div class="serviceSection2 col-lg-4 col-md-4 col-sm-4 col-12 wow animate__animated animate__fadeInUp animate__delay-1s">
                         <div>
                             <i class="fas fa-home fa-4x"></i>
                         </div>
@@ -185,7 +187,7 @@
                             Ejecución de proyectos. Sistema tradicional e industrializado.
                         </p>
                     </div>
-                    <div class="serviceSection3 col-lg-4 col-md-4 col-sm-4 col-12 wow animate__animated animate__fadeInUp animate__delay-3s">
+                    <div class="serviceSection3 col-lg-4 col-md-4 col-sm-4 col-12 wow animate__animated animate__fadeInUp animate__delay-2s">
                         <div>
                             <i class="fas fa-hard-hat fa-4x"></i>
                         </div>
@@ -201,7 +203,6 @@
         </main>
 
         <!--Footer-->
-
         <footer class="container-fluid">
             <div class="row">
                 <div class="mapa text-center col-6">
@@ -230,6 +231,9 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Cierre de efecto fade in -->
+        </div>
         
         <script src="js/lib/jquery-3.6.0.min.js"></script>
         <script src="js/lib/bootstrap.bundle.min.js"></script>
@@ -239,5 +243,7 @@
         <script>
             new WOW().init();
         </script>
+        <script src="../js/componentes.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 </html>

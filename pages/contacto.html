@@ -14,10 +14,17 @@
         <link rel="stylesheet" href="../css/stylecss.css" type="text/css"/>
     </head>
     <body>
-        <header class="sticky-top">
 
-            <!--Barra de navegación-->
-            
+        <!-- Spinner -->
+        <div id="contenedor__carga">
+            <div id="carga"></div>
+        </div>
+
+        <!-- Efecto fade in -->
+        <div id="fade__effect">
+        
+        <!--Barra de navegación-->
+        <header class="sticky-top">
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div>
                     <a href="../index.html">
@@ -55,7 +62,7 @@
 
         <main>
             <!--Contacto-->
-            <section class="mx-auto container__form animate__animated animate__fadeInLeft">
+            <section class="mx-auto container__form">
                 <form action="../php/correo.php" method="POST" enctype="">
                     <fieldset class="form-row">
                         <legend><h1>Contacto</h1></legend>
@@ -128,6 +135,9 @@
             </div>
         </footer>
 
+        <!-- Cierre de efecto fade in -->
+        </div>
+
         <script src="../js/lib/jquery-3.6.0.min.js"></script>
         <script src="../js/lib/bootstrap.bundle.min.js"></script>
         <script src="https://kit.fontawesome.com/32a702b04e.js" crossorigin="anonymous"></script>
@@ -135,5 +145,7 @@
         <script>
             new WOW().init();
         </script>
+        <script src="../js/componentes.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 </html>

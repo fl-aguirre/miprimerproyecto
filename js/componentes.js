@@ -146,7 +146,7 @@ function modalForm () {
                                     </div>
                                     <div class="col-12">
                                         <label for="telefono">Teléfono</label>
-                                        <input type="text" class="form-control" id="telefono" name="telefono" >
+                                        <input type="number" class="form-control" id="telefono" name="telefono" >
                                     </div>
                                 </div>
                                 <div class="form-row">
@@ -170,18 +170,18 @@ function modalForm () {
                                 <div class="form-row">
                                     <div class="col-9">
                                         <label for="tarjeta">N° Tarjeta</label>
-                                        <input type="text" class="form-control" id="tarjeta" name="tarjeta" >
+                                        <input type="number" class="form-control" id="tarjeta" name="tarjeta" >
                                     </div>
                                     <div class="col-3">
                                         <label for="codigo">Código de seguridad</label>
-                                        <input type="text" class="form-control" id="codigo" name="codigo" >
+                                        <input type="number" class="form-control" id="codigo" name="codigo" >
                                     </div>
                                 </div>
                             </div>
                         </form>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            <input id="btnBuyForm" type="submit" name="enviar" class="btn btn-primary" data-dismiss="modal" value="Enviar">
+                            <input id="btnBuyForm" type="submit" name="enviar" class="btn btn-primary" value="Enviar">
                         </div>
                     </div>
                 </div>
@@ -193,10 +193,14 @@ function modalForm () {
 
 //CONTENEDOR DE PRECIO TOTAL
 function priceContainer() {
-    return `<div class="col-12 containPrice">
-                <h3>Precio total: $ <span id="totalPrice">${precioTotal}</span></h3>
-                <h3>Envío: $ <span id="shipping">${costoEnvio}</span></h3><hr>
-                <h3>Precio final: $ <span id="finalPrice">${precioFinal}</span></h3>
+    return `<div class="col-12 priceContainer">
+                <div class="priceContainer__total">
+                    <h3>Precio total: $ <span id="totalPrice">${precioTotal}</span></h3>
+                    <h3>Envío: $ <span id="shipping">${costoEnvio}</span></h3>
+                </div>
+                <div class="priceContainer__final">
+                    <h3>Precio final: $ <span id="finalPrice">${precioFinal}</span></h3>
+                </div>
             </div>`;
 }
 

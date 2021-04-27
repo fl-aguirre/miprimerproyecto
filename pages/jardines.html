@@ -14,10 +14,17 @@
         <link rel="stylesheet" href="../css/stylecss.css" type="text/css"/>
     </head>
     <body>
+
+        <!-- Spinner -->
+        <div id="contenedor__carga">
+            <div id="carga"></div>
+        </div>
+
+        <!-- Efecto fade in -->
+        <div id="fade__effect">
+
+        <!--Barra de navegación-->
         <header class="sticky-top">
-
-            <!--Barra de navegación-->
-
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <div>
                     <a href="../index.html">
@@ -52,17 +59,16 @@
                 </div>
             </nav>
         </header>
+
         <main class="container-fluid">
-
             <!--Jardines-->
-
-            <div class="fondoJ wow animate__animated animate__fadeInLeft">
+            <div class="fondoJ">
                 <h1>
                     Jardines
                 </h1>
             </div>
             <section class="containJ">
-                <div class="containJ__effect wow animate__animated animate__fadeInUp animate__delay-1s">
+                <div class="containJ__effect">
                     <div class="background">
                         <img src="../images/imagenjardin4.jpeg" alt="Imagen jardin 1" class="img-fluid background__image">
                     </div>
@@ -73,7 +79,7 @@
                         Diseño y mantenimiento de parques y jardines
                     </p>
                 </div>
-                <div class="containJ__effect wow animate__animated animate__fadeInUp animate__delay-2s">
+                <div class="containJ__effect">
                     <div class="background">
                         <img src="../images/imagenjardin1.jpg" alt="Imagen jardin 2" class="background__image img-fluid">
                     </div>
@@ -84,7 +90,7 @@
                         Ecosistemas para interiores y exteriores
                     </p>
                 </div>
-                <div class="containJ__effect wow animate__animated animate__fadeInUp animate__delay-3s">
+                <div class="containJ__effect">
                     <div class="background">
                         <img src="../images/imagenjardin3.jpeg" alt="Imagen jardin 3" class="background__image img-fluid">
                     </div>
@@ -128,6 +134,9 @@
                 </div>
             </div>
         </footer>
+
+        <!-- Cierre de efecto fade in -->
+        </div>
         
         <script src="../js/lib/jquery-3.6.0.min.js"></script>
         <script src="../js/lib/bootstrap.bundle.min.js"></script>
@@ -142,5 +151,7 @@
               baguetteBox.run('.gallery');
             });
         </script>
+        <script src="../js/componentes.js"></script>
+        <script src="../js/main.js"></script>
     </body>
 </html>

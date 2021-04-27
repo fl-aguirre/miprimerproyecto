@@ -9,8 +9,9 @@ let costoEnvio = 200;
 let precioFinal;
 let nombreComprador;
 let datosComprador = [];
+let validador;
 
-//DECLARAR CLASE "PRODUCTO"
+//DECLARAR CLASE "PRODUCTO" Y SUS MÉTODOS
 class Producto {
     constructor(nuevoId, nuevoNombre, nuevoPrecio, nuevaImagen, nuevadescripcion){
         this.id = nuevoId;
@@ -72,8 +73,7 @@ function renderProducts (lista) {
         //BOTON PARA SELECCIONAR PRODUCTOS Y GUARDAR EN STORAGE
             $(`#btnAdd${producto.id}`).click(() => {
                 if (listaCarrito.find(elemento => elemento.id == producto.id)){
-                    let mensaje = "Ya has agregado este producto"
-                    $("body").prepend(alertaMsj(mensaje));
+                    $("body").prepend(alertaMsj("Ya has agregado este producto"));
                     quitarAlerta();
                 }
                 else{
@@ -164,8 +164,7 @@ function productos(lista){
                 carrito(listaCarrito);
 
             }else{
-                let mensaje = "Tu carrito está vacío!"
-                $("body").prepend(alertaMsj(mensaje));
+                $("body").prepend(alertaMsj("Tu carrito está vacío!"));
                 quitarAlerta();
             }
         });
@@ -179,7 +178,7 @@ function carrito(lista){
     renderCart(lista);
        
     $(document).ready( ()=> {        
-        //BOTON PARA CALCULAR Y MOSTRAR PRECIO TOTAL
+        //BOTON PARA CALCULAR CANTIDAD Y PRECIO Y RENDERIZAR
         lista.forEach(producto => {
             $(`#btnPlus${producto.id}`).click(() => {
                 producto.agregarCantidad();
@@ -203,29 +202,34 @@ function carrito(lista){
         $('#btnBuy').click(() => {
             $("body").prepend(modalForm());
 
+            //BOTON PARA CONFIRMAR COMPRA EN MODAL
             $(document).ready(function(){
                 $('#btnBuyForm').click((e) => {
                     e.preventDefault();
+                    var datosInput = $('#formularioCompra :input');
+                    if (validar(datosInput) == true){
+                        $("#Modal").modal("toggle");
 
-                    //GUARDAR DATOS DE LA LISTA
-                    calcularTotal(lista);
-                    listaCompra = lista;
-                    saveLocal("listaCompra", JSON.stringify(listaCompra));
-                    
-                    //GUARDAR DATOS DEL COMPRADOR
-                    $('#formularioCompra :input').each(function(){
-                        var name = $(this).attr('id');
-                        var valor = $(this).val();
-                        datosComprador.push({
-                            key: name,
-                            value: valor
+                        //GUARDAR DATOS DE LA LISTA
+                        calcularTotal(lista);
+                        listaCompra = lista;
+                        saveLocal("listaCompra", JSON.stringify(listaCompra));
+                        
+                        //GUARDAR DATOS DEL COMPRADOR
+                        datosInput.each(function(){
+                            var name = $(this).attr('id');
+                            var valor = $(this).val();
+                            datosComprador.push({
+                                key: name,
+                                value: valor
+                            });
                         });
-                    });
-                    localStorage.removeItem("datosComprador")
-                    saveLocal("datosComprador", JSON.stringify(datosComprador));
+                        localStorage.removeItem("datosComprador")
+                        saveLocal("datosComprador", JSON.stringify(datosComprador));
 
-                    //RENDERIZAR COMPRA
-                    compra(listaCompra);
+                        //RENDERIZAR COMPRA
+                        compra(listaCompra);
+                    };
                 });
             });
         });
@@ -237,10 +241,28 @@ function carrito(lista){
     });
 }
 
+//FUNCION VALIDAR
+function validar(datosInput) {
+    var validador = 0;
+    datosInput.each(function () {
+        var valor = $(this).val();
+        if (valor == ""){
+            $("#Modal").prepend(alertaMsj("Debes terminar de llenar todos los campos"));
+            return false;
+        }else {
+            return validador++;
+        }
+    });
+    if (validador == 10){
+        return true;
+    }
+}
+
 //FUNCION PRODUCTOS COMPRADOS
 function compra(lista){
 
-    $.post("https://jsonplaceholder.typicode.com/posts", {'lista': JSON.stringify(lista)}, 
+    //ENVIAR DATOS AL API
+    $.post("https://jsonplaceholder.typicode.com/posts", {'lista': JSON.stringify(lista), 'datosComprador': JSON.stringify(datosComprador)}, 
         function (data, estado) {
             if(estado === "success"){
 
@@ -280,8 +302,7 @@ function compra(lista){
             
             //MOSTRAR ALERTA DE ERROR SI NO EJECUTA EL POST CORRECTAMENTE
             }else {
-                let mensaje = "Hubo un error en el envío de la información"
-                $("body").prepend(alertaMsj(mensaje));
+                $("body").prepend(alertaMsj("Hubo un error en el envío de la información"));
                 quitarAlerta();
             }
     });
@@ -306,6 +327,14 @@ function execute(url) {
 
 //EJECUTAR
 execute("https://raw.githubusercontent.com/fl-aguirre/miprimerproyecto/main/data/data.json")
+
+
+window.onload = function () {
+    var contenedorSpinner = $("#contenedor__carga");
+    $('#fade__effect').hide();
+    contenedorSpinner.hide();
+    $('#fade__effect').fadeIn(1000);
+}
 
 
 
