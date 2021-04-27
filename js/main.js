@@ -202,27 +202,31 @@ function carrito(lista){
         //BOTON PARA COMPRAR
         $('#btnBuy').click(() => {
             $("body").prepend(modalForm());
-            $('#btnBuyForm').click((e) => {
-                e.preventDefault();
 
-                //GUARDAR DATOS DE LA LISTA
-                calcularTotal(lista);
-                listaCompra = lista;
-                saveLocal("listaCompra", JSON.stringify(listaCompra));
-                
-                //GUARDAR DATOS DEL COMPRADOR
-                $('#formularioCompra :input').each(function(){
-                    var name = $(this).attr('id');
-                    var valor = $(this).val();
-                    datosComprador.push({
-                        key: name,
-                        value: valor
+            $(document).ready(function(){
+                $('#btnBuyForm').click((e) => {
+                    e.preventDefault();
+
+                    //GUARDAR DATOS DE LA LISTA
+                    calcularTotal(lista);
+                    listaCompra = lista;
+                    saveLocal("listaCompra", JSON.stringify(listaCompra));
+                    
+                    //GUARDAR DATOS DEL COMPRADOR
+                    $('#formularioCompra :input').each(function(){
+                        var name = $(this).attr('id');
+                        var valor = $(this).val();
+                        datosComprador.push({
+                            key: name,
+                            value: valor
+                        });
                     });
-                });
-                saveLocal("datosComprador", JSON.stringify(datosComprador));
+                    localStorage.removeItem("datosComprador")
+                    saveLocal("datosComprador", JSON.stringify(datosComprador));
 
-                //RENDERIZAR COMPRA
-                compra(listaCompra);
+                    //RENDERIZAR COMPRA
+                    compra(listaCompra);
+                });
             });
         });
 

@@ -134,59 +134,62 @@ function modalForm () {
                                 <div class="form-row">
                                     <div class="col-6">
                                         <label for="nombre">Nombre</label>
-                                        <input type="text" class="form-control" id="nombre" name="nombre">
+                                        <input type="text" class="form-control" id="nombre" name="nombre" >
                                     </div>
                                     <div class="col-6">
                                         <label for="apellido">Apellido</label>
-                                        <input type="text" class="form-control" id="apellido" name="apellido">
+                                        <input type="text" class="form-control" id="apellido" name="apellido" >
                                     </div>
                                     <div class="col-12">
                                         <label for="email">Email</label>
-                                        <input type="email" class="form-control" id="email" name="email">
+                                        <input type="email" class="form-control" id="email" name="email" >
                                     </div>
                                     <div class="col-12">
                                         <label for="telefono">Teléfono</label>
-                                        <input type="text" class="form-control" id="telefono" name="telefono">
+                                        <input type="text" class="form-control" id="telefono" name="telefono" >
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-9">
                                         <label for="direccion">Dirección</label>
-                                        <input type="text" class="form-control" id="direccion" name="direccion">
+                                        <input type="text" class="form-control" id="direccion" name="direccion" >
                                     </div>
                                     <div class="col-3">
                                         <label for="cp">CP</label>
-                                        <input type="text" class="form-control" id="cp" name="cp">
+                                        <input type="text" class="form-control" id="cp" name="cp" >
                                     </div>
                                     <div class="col-6">
                                         <label for="localidad">Localidad</label>
-                                        <input type="text" class="form-control" id="localidad" name="localidad">
+                                        <input type="text" class="form-control" id="localidad" name="localidad" >
                                     </div>
                                     <div class="col-6">
                                         <label for="provincia">Provincia</label>
-                                        <input type="text" class="form-control" id="provincia" name="provincia">
+                                        <input type="text" class="form-control" id="provincia" name="provincia" >
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <div class="col-9">
                                         <label for="tarjeta">N° Tarjeta</label>
-                                        <input type="text" class="form-control" id="tarjeta" name="tarjeta">
+                                        <input type="text" class="form-control" id="tarjeta" name="tarjeta" >
                                     </div>
                                     <div class="col-3">
                                         <label for="codigo">Código de seguridad</label>
-                                        <input type="text" class="form-control" id="codigo" name="codigo">
+                                        <input type="text" class="form-control" id="codigo" name="codigo" >
                                     </div>
                                 </div>
                             </div>
                         </form>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                            <button id="btnBuyForm" type="submit" name="enviar" class="btn btn-primary" data-dismiss="modal">Confirmar compra</button>
+                            <input id="btnBuyForm" type="submit" name="enviar" class="btn btn-primary" data-dismiss="modal" value="Enviar">
                         </div>
                     </div>
                 </div>
             </div>`
 }
+
+//ALERTA DE FORMULARIO INCOMPLETO
+
 
 //CONTENEDOR DE PRECIO TOTAL
 function priceContainer() {
