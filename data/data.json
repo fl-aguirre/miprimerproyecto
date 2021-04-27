@@ -3,35 +3,35 @@
     "nombre": "Maceta Misionera",
     "precio": 2290,
     "imagen": "../images/producto1.jpg",
-    "descripcion": "Color: Blanco\nMaterial: Fibrocemento\nMedidas: 50 cm x 40 cm x 50 cm\nPara interior."
+    "descripcion": "Color: Blanco. Material: Fibrocemento. Medidas: 50 cm x 40 cm x 50 cm. Para interior."
   }, {
     "id": 2,
     "nombre": "Triciclo porta macetas",
     "precio": 3000,
     "imagen": "../images/producto2.jpg",
-    "descripcion": "Color: Blanco\nMaterial: Hierro\nMedidas: 54 x 31 x 40 cm\nPara dos macetas"
+    "descripcion": "Color: Blanco. Material: Hierro. Medidas: 54 x 31 x 40 cm. Para dos macetas"
   }, {
     "id": 3,
     "nombre": "Porta maceta de metal",
     "precio": 1500,
     "imagen": "../images/producto3.jpg",
-    "descripcion": "Color: Negro\nMaterial: Hierro\nMedidas: 54 x 31 x 40 cm\nIncluye canasto de mimbre"
+    "descripcion": "Color: Negro. Material: Hierro. Medidas: 54 x 31 x 40 cm. Incluye canasto de mimbre"
   }, {
     "id": 4,
     "nombre": "Mini tutores para jardín",
     "precio": 1899,
     "imagen": "../images/producto4.jpg",
-    "descripcion": "Color: Óxido\nMaterial: Hierro\nMedidas: 50 x 10 cm\nPaquete de 4 (colibrí, corazón, mariposa y libélula)"
+    "descripcion": "Color: Óxido. Material: Hierro. Medidas: 50 x 10 cm. Paquete de 4 (colibrí, corazón, mariposa y libélula)"
   }, {
     "id": 5,
     "nombre": "Faro solar decorativo",
     "precio": 2239,
     "imagen": "../images/producto5.jpg",
-    "descripcion": "Color: Óxido\nMaterial: Hierro\nMedidas: 11 x 19 x 89 cm\nFotosensible"
+    "descripcion": "Color: Óxido. Material: Hierro. Medidas: 11 x 19 x 89 cm. Fotosensible"
 }, {
     "id": 6,
     "nombre": "Maceta cilíndrica",
     "precio": 1900,
     "imagen": "../images/producto6.jpg",
-    "descripcion": "Color: Cemento\nMaterial: Fibrocemento\nMedidas: 50 cm x 40 cm x 50 cm\nPara exterior"
+    "descripcion": "Color: Cemento. Material: Fibrocemento. Medidas: 50 cm x 40 cm x 50 cm. Para exterior"
 }]
