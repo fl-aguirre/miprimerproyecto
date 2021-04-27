@@ -9,29 +9,29 @@
     "nombre": "Triciclo porta macetas",
     "precio": 3000,
     "imagen": "../images/producto2.jpg",
-    "descripcion": "Triciclo decorativo con porta macetas (con espacio para dos macetas). Color blanco. Material: Hierro. Medidas: 54 x 31 x 40 cm."
+    "descripcion": "Triciclo decorativo con porta macetas (con espacio para dos macetas). Color blanco. Material: hierro. Medidas: 54 x 31 x 40 cm."
   }, {
     "id": 3,
     "nombre": "Porta maceta de metal",
     "precio": 1500,
     "imagen": "../images/producto3.jpg",
-    "descripcion": "Porta maceta decorativo de metal. Incluye canasto de mimbre. Color negro. Material: Hierro. Medidas: 54 x 31 x 40 cm."
+    "descripcion": "Porta maceta decorativo de metal. Incluye canasto de mimbre. Color negro. Material: hierro. Medidas: 54 x 31 x 40 cm."
   }, {
     "id": 4,
     "nombre": "Mini tutores para jardín",
     "precio": 1899,
     "imagen": "../images/producto4.jpg",
-    "descripcion": "Mini tutores decorativos para jardín o maceta. Paquete de 4: colibrí, corazón, mariposa y libélula. Color óxido (efecto oxidado). Material: Hierro. Medidas: 50 x 10 cm."
+    "descripcion": "Mini tutores decorativos para jardín o maceta. Paquete de 4: colibrí, corazón, mariposa y libélula. Color óxido (efecto oxidado). Material: hierro. Medidas: 50 x 10 cm."
   }, {
     "id": 5,
     "nombre": "Faro solar decorativo",
     "precio": 2239,
     "imagen": "../images/producto5.jpg",
-    "descripcion": "Faro decorativo fotosensible para exteriores. Color óxido (efecto oxidado). Material: Hierro. Medidas: 11 x 19 x 89 cm."
+    "descripcion": "Faro decorativo fotosensible para exteriores. Color óxido (efecto oxidado). Material: hierro. Medidas: 11 x 19 x 89 cm."
 }, {
     "id": 6,
     "nombre": "Maceta cilíndrica",
     "precio": 1900,
     "imagen": "../images/producto6.jpg",
-    "descripcion": "Maceta estilo cilíndrica para exteriores. Color cemento. Material: Fibrocemento. Medidas: 50 cm x 40 cm x 50 cm."
+    "descripcion": "Maceta estilo cilíndrica para exteriores. Color cemento. Material: fibrocemento. Medidas: 50 cm x 40 cm x 50 cm."
 }]
